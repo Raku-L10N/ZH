@@ -1,0 +1,156 @@
+use Test;
+plan 12;
+
+# Test if block
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    如果 True {
+        "如果测试通过"
+    }
+    CODE
+    is $ast.EVAL, "如果测试通过", "如果 block works";
+}
+
+# Test if-else blocks
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    如果 False {
+        "假"
+    } 否则 {
+        "真"
+    }
+    CODE
+    is $ast.EVAL, "真", "如果-否则 block works";
+}
+
+# Test unless block
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    除非 False {
+        "除非测试通过"
+    }
+    CODE
+    is $ast.EVAL, "除非测试通过", "除非 block works";
+}
+
+# Test with block
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    my $value = "defined";
+    若定义且真 $value {
+        "值已定义"
+    }
+    CODE
+    is $ast.EVAL, "值已定义", "若定义且真 block works";
+}
+
+# Test without block
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    my $value;
+    my $result = "default";
+    若定义或假 $value {
+        $result = "值未定义";
+    }
+    $result
+    CODE
+    is $ast.EVAL, "值未定义", "若定义或假 block works";
+}
+
+# Test given-when-default blocks
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    my $value = "test";
+    针对 $value {
+        若是 "test" { "匹配成功" }
+        其他情况 { "匹配失败" }
+    }
+    CODE
+    is $ast.EVAL, "匹配成功", "针对-若是-其他情况 block works";
+}
+
+# Test for loop
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    my @result;
+    对于 1..3 -> $i {
+        @result.push($i);
+    }
+    @result.join(",")
+    CODE
+    is $ast.EVAL, "1,2,3", "对于 loop works";
+}
+
+# Test while loop
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    my $count = 0;
+    my @result;
+    若成立就循环 $count < 3 {
+        @result.push($count);
+        $count++;
+    }
+    @result.join(",")
+    CODE
+    is $ast.EVAL, "0,1,2", "若成立就循环 loop works";
+}
+
+# Test until loop
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    my $count = 0;
+    my @result;
+    直到 $count >= 3 {
+        @result.push($count);
+        $count++;
+    }
+    @result.join(",")
+    CODE
+    is $ast.EVAL, "0,1,2", "直到 loop works";
+}
+
+# Test loop block
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    my $count = 0;
+    my @result;
+    循环 {
+        @result.push($count);
+        $count++;
+        last if $count >= 3;
+    }
+    @result.join(",")
+    CODE
+    is $ast.EVAL, "0,1,2", "循环 block works";
+}
+
+# Test repeat-until block
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    my $count = 0;
+    my @result;
+    重复执行 {
+        @result.push($count);
+        $count++;
+    } 直到 $count >= 3;
+    @result.join(",")
+    CODE
+    is $ast.EVAL, "0,1,2", "重复执行-直到 block works";
+}
+
+# Test simple nested blocks
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    my $x = 5;
+    如果 $x > 0 {
+        如果 $x > 10 {
+            "大于10"
+        } 否则 {
+            "大于0但小于等于10"
+        }
+    }
+    CODE
+    is $ast.EVAL, "大于0但小于等于10", "嵌套 blocks work";
+}
+
+done-testing;
