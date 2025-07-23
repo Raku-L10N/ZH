@@ -1,7 +1,7 @@
 # This file contains the ……… Slang of the Raku Programming Language
 
 #- start of generated part of localization ------------------------------------
-#- Generated on 2025-07-24T01:20:23+08:00 by update-localization.raku
+#- Generated on 2025-07-24T01:31:13+08:00 by update-localization.raku
 #- PLEASE DON'T CHANGE ANYTHING BELOW THIS LINE
 
 role L10N::ZH {
@@ -83,15 +83,15 @@ role L10N::ZH {
     token meta-R { R}
     token meta-X { X}
     token meta-Z { Z}
-    token modifier-for { for}
-    token modifier-given { given}
-    token modifier-if { if}
-    token modifier-unless { unless}
-    token modifier-until { until}
-    token modifier-when { when}
-    token modifier-while { while}
-    token modifier-with { with}
-    token modifier-without { without}
+    token modifier-for { 对每个}
+    token modifier-given { 针对}
+    token modifier-if { 如果}
+    token modifier-unless { 如果不}
+    token modifier-until { 直到}
+    token modifier-when { 若是}
+    token modifier-while { 若成立就循环}
+    token modifier-with { 若定义且真}
+    token modifier-without { 若未定义或假}
     token multi-multi { multi}
     token multi-only { only}
     token multi-proto { proto}

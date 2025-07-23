@@ -441,15 +441,15 @@ block-without   若未定义或假
 #meta-Z  Z
 
 # KEY             TRANSLATION
-#modifier-for      for
-#modifier-given    given
-#modifier-if       if
-#modifier-unless   unless
-#modifier-until    until
-#modifier-when     when
-#modifier-while    while
-#modifier-with     with
-#modifier-without  without
+modifier-for      对每个
+modifier-given    针对
+modifier-if       如果
+modifier-unless   如果不
+modifier-until    直到
+modifier-when     若是
+modifier-while    若成立就循环
+modifier-with     若定义且真
+modifier-without  若未定义或假
 
 # KEY        TRANSLATION
 #multi-multi  multi
