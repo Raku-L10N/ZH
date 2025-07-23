@@ -642,11 +642,12 @@ block-without   若未定义或假
 #named-year  year
 
 # KEY            TRANSLATION
-#package-class    class
-#package-grammar  grammar
-#package-module   module
-#package-package  package
-#package-role     role
+package-class    类
+package-grammar  语法
+package-module   模块
+package-package  包
+# does 的是能力，而不是角色
+package-role     能力
 
 # KEY           TRANSLATION
 #phaser-BEGIN    BEGIN

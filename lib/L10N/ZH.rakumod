@@ -1,7 +1,7 @@
 # This file contains the ……… Slang of the Raku Programming Language
 
 #- start of generated part of localization ------------------------------------
-#- Generated on 2025-07-24T00:48:30+08:00 by update-localization.raku
+#- Generated on 2025-07-24T01:16:47+08:00 by update-localization.raku
 #- PLEASE DON'T CHANGE ANYTHING BELOW THIS LINE
 
 role L10N::ZH {
@@ -95,11 +95,11 @@ role L10N::ZH {
     token multi-multi { multi}
     token multi-only { only}
     token multi-proto { proto}
-    token package-class { class}
-    token package-grammar { grammar}
-    token package-module { module}
-    token package-package { package}
-    token package-role { role}
+    token package-class { 类}
+    token package-grammar { 语法}
+    token package-module { 模块}
+    token package-package { 包}
+    token package-role { 能力}
     token phaser-BEGIN { BEGIN}
     token phaser-CATCH { CATCH}
     token phaser-CHECK { CHECK}
