@@ -1,5 +1,4 @@
 use Test;
-plan 6;
 
 # Test 过程 (sub)
 {
@@ -80,5 +79,7 @@ plan 6;
     CODE
     is $ast.EVAL, "matched", "规则";
 }
+
+done-testing;
 
 # vim: expandtab shiftwidth=4

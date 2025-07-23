@@ -1,5 +1,4 @@
 use Test;
-plan 12;
 
 # Test if block
 {
@@ -36,7 +35,7 @@ plan 12;
 # Test with block
 {
     my $ast := Q:to/CODE/.AST("ZH");
-    my $value = "defined";
+    局部 $value = "defined";
     若定义且真 $value {
         "值已定义"
     }
@@ -47,8 +46,8 @@ plan 12;
 # Test without block
 {
     my $ast := Q:to/CODE/.AST("ZH");
-    my $value;
-    my $result = "default";
+    局部 $value;
+    局部 $result = "default";
     若未定义或假 $value {
         $result = "值未定义";
     }
@@ -60,7 +59,7 @@ plan 12;
 # Test given-when-default blocks
 {
     my $ast := Q:to/CODE/.AST("ZH");
-    my $value = "test";
+    局部 $value = "test";
     针对 $value {
         若是 "test" { "匹配成功" }
         其他情况 { "匹配失败" }
@@ -69,10 +68,10 @@ plan 12;
     is $ast.EVAL, "匹配成功", "针对-若是-其他情况";
 }
 
-# Test for loop
+# Test for
 {
     my $ast := Q:to/CODE/.AST("ZH");
-    my @result;
+    局部 @result;
     对每个 1..3 -> $i {
         @result.push($i);
     }
@@ -81,25 +80,25 @@ plan 12;
     is $ast.EVAL, "1,2,3", "对每个";
 }
 
-# Test while loop
+# Test while
 {
     my $ast := Q:to/CODE/.AST("ZH");
-    my $count = 0;
-    my @result;
-    若成立就循环 $count < 3 {
+    局部 $count = 0;
+    局部 @result;
+    有条件循环 $count < 3 {
         @result.push($count);
         $count++;
     }
     @result.join(",")
     CODE
-    is $ast.EVAL, "0,1,2", "若成立就循环";
+    is $ast.EVAL, "0,1,2", "有条件循环";
 }
 
-# Test until loop
+# Test until
 {
     my $ast := Q:to/CODE/.AST("ZH");
-    my $count = 0;
-    my @result;
+    局部 $count = 0;
+    局部 @result;
     直到 $count >= 3 {
         @result.push($count);
         $count++;
@@ -109,15 +108,15 @@ plan 12;
     is $ast.EVAL, "0,1,2", "直到";
 }
 
-# Test loop block
+# Test loop
 {
     my $ast := Q:to/CODE/.AST("ZH");
-    my $count = 0;
-    my @result;
-    循环 {
+    局部 $count = 0;
+    局部 @result;
+    无条件循环 {
         @result.push($count);
         $count++;
-        last if $count >= 3;
+        如果 $count >= 3 {last;}
     }
     @result.join(",")
     CODE
@@ -127,8 +126,8 @@ plan 12;
 # Test repeat-until block
 {
     my $ast := Q:to/CODE/.AST("ZH");
-    my $count = 0;
-    my @result;
+    局部 $count = 0;
+    局部 @result;
     重复执行 {
         @result.push($count);
         $count++;
@@ -141,7 +140,7 @@ plan 12;
 # Test simple nested blocks
 {
     my $ast := Q:to/CODE/.AST("ZH");
-    my $x = 5;
+    局部 $x = 5;
     如果 $x > 0 {
         如果 $x > 10 {
             "大于10"

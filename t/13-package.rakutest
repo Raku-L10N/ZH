@@ -1,11 +1,10 @@
 use Test;
-plan 5;
 
 # Test 类 (class)
 {
     my $ast := Q:to/CODE/.AST("ZH");
     类 TestClass {
-        method greet() { "Hello from class" }
+        方法 greet() { "Hello from class" }
     }
 
     TestClass.new.greet
@@ -47,11 +46,13 @@ plan 5;
 {
     my $ast := Q:to/CODE/.AST("ZH");
     语法 TestGrammar2 {
-        token TOP { 'hello' }
+        规则 TOP { 'hello' }
     }
     TestGrammar2.parse('hello') ?? 'matched' !! 'no match'
     CODE
     is $ast.EVAL, "matched", "语法";
 }
+
+done-testing;
 
 # vim: expandtab shiftwidth=4

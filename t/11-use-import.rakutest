@@ -1,5 +1,4 @@
 use Test;
-plan 2;
 
 # Test use
 {
@@ -14,8 +13,8 @@ plan 2;
 {
     my $ast := Q:to/CODE/.AST("ZH");
     # Create a simple exportable sub for testing
-    module TestModule {
-        our sub test-export() { "exported function" }
+    模块 TestModule {
+        公开 过程 test-export() { "exported function" }
     }
 
     导入 TestModule;
@@ -23,3 +22,5 @@ plan 2;
     CODE
     is $ast.EVAL, "exported function", "导入";
 }
+
+done-testing;

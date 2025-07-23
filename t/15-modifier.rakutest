@@ -59,32 +59,32 @@ plan 9;
     is $ast.EVAL, "matched", "若是";
 }
 
-# Test modifier-while (若成立就循环)
+# Test modifier-while (有条件循环)
 {
     my $ast := Q:to/CODE/.AST("ZH");
     {
         局部 $count = 0;
-        $count++ 若成立就循环 $count < 3;
+        $count++ 有条件循环 $count < 3;
         $count
     }()
     CODE
-    is $ast.EVAL, 3, "若成立就循环";
+    is $ast.EVAL, 3, "有条件循环";
 }
 
-# Test modifier-with (若定义且真)
+# Test modifier-with (若后者定义且真)
 {
     my $ast := Q:to/CODE/.AST("ZH");
-    "found" 若定义且真 "hello"
+    "found" 若后者定义且真 "hello"
     CODE
-    is $ast.EVAL, "found", "若定义且真";
+    is $ast.EVAL, "found", "若后者定义且真";
 }
 
 # Test modifier-without (若未定义或假)
 {
     my $ast := Q:to/CODE/.AST("ZH");
-    "not found" 若未定义或假 Nil
+    "not found" 若后者未定义或假 Nil
     CODE
-    is $ast.EVAL, "not found", "若未定义或假";
+    is $ast.EVAL, "not found", "若后者未定义或假";
 }
 
 # vim: expandtab shiftwidth=4

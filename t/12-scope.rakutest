@@ -1,5 +1,4 @@
 use Test;
-plan 3;
 
 # Test 局部 (my) - local variables
 {
@@ -22,7 +21,7 @@ plan 3;
 # Test 持续量 (state) - state variables in function
 {
     my $ast := Q:to/CODE/.AST("ZH");
-    sub state-counter() {
+    过程 state-counter() {
         持续量 $count = 0;
         ++$count;
     }
@@ -31,5 +30,7 @@ plan 3;
     CODE
     is $ast.EVAL, "1,2,3", "持续量";
 }
+
+done-testing;
 
 # vim: expandtab shiftwidth=4
