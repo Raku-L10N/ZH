@@ -652,22 +652,22 @@ package-role     能力
 # KEY           TRANSLATION
 #phaser-BEGIN    BEGIN
 phaser-CATCH     捕获错误
-#phaser-CHECK    CHECK
-#phaser-CLOSE    CLOSE
-#phaser-CONTROL  CONTROL
-#phaser-DOC      DOC
-#phaser-END      END
-#phaser-ENTER    ENTER
-#phaser-FIRST    FIRST
-#phaser-INIT     INIT
-#phaser-KEEP     KEEP
-#phaser-LAST     LAST
-#phaser-LEAVE    LEAVE
-#phaser-NEXT     NEXT
-#phaser-POST     POST
-#phaser-PRE      PRE
-#phaser-QUIT     QUIT
-#phaser-UNDO     UNDO
+phaser-CHECK     编译检查时
+phaser-CLOSE     收尾
+phaser-CONTROL   控制流处理
+phaser-DOC       文档
+phaser-END       结束时
+phaser-ENTER     进入时
+phaser-FIRST     首次进入时
+phaser-INIT      程序初始化时
+phaser-KEEP      正常退出时
+phaser-LAST      最后离开时
+phaser-LEAVE     离开时
+phaser-NEXT      下一轮前
+phaser-POST      后置条件
+phaser-PRE       前置条件
+phaser-QUIT      程序退出时
+phaser-UNDO      回滚
 
 # KEY                      TRANSLATION
 #pragma-dynamic-scope       dynamic-scope
