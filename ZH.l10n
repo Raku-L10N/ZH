@@ -786,10 +786,10 @@ block-without   若未定义或假
 #typer-subset  subset
 
 # KEY        TRANSLATION
-#use-import   import
+use-import    导入
 #use-need     need
 #use-no       no
 #use-require  require
-#use-use      use
+use-use       使用
 
 # vim: expandtab shiftwidth=4

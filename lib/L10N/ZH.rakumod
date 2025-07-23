@@ -1,7 +1,7 @@
 # This file contains the ……… Slang of the Raku Programming Language
 
 #- start of generated part of localization ------------------------------------
-#- Generated on 2025-07-23T23:32:42+08:00 by update-localization.raku
+#- Generated on 2025-07-23T23:49:12+08:00 by update-localization.raku
 #- PLEASE DON'T CHANGE ANYTHING BELOW THIS LINE
 
 role L10N::ZH {
@@ -174,11 +174,11 @@ role L10N::ZH {
     token traitmod-trusts { trusts}
     token typer-enum { enum}
     token typer-subset { subset}
-    token use-import { import}
+    token use-import { 导入}
     token use-need { need}
     token use-no { no}
     token use-require { require}
-    token use-use { use}
+    token use-use { 使用}
     method core2ast {
         self.ast // RakuAST::Name.from-identifier(self.Str)
     }
