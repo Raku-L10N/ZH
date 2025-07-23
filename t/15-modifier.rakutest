@@ -1,0 +1,90 @@
+use Test;
+plan 9;
+
+# Test modifier-for (对每个)
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    {
+        局部 @result;
+        @result.push($_) 对每个 1..3;
+        @result.join("")
+    }()
+    CODE
+    is $ast.EVAL, "123", "对每个";
+}
+
+# Test modifier-given (针对)
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    "number" 针对 42
+    CODE
+    is $ast.EVAL, "number", "针对";
+}
+
+# Test modifier-if (如果)
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    "yes" 如果 True
+    CODE
+    is $ast.EVAL, "yes", "如果";
+}
+
+# Test modifier-unless (如果不)
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    "no" 如果不 False
+    CODE
+    is $ast.EVAL, "no", "如果不";
+}
+
+# Test modifier-until (直到)
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    {
+        局部 $count = 0;
+        $count++ 直到 $count >= 3;
+        $count
+    }()
+    CODE
+    is $ast.EVAL, 3, "直到";
+}
+
+# Test modifier-when (若是)
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    针对 "test" {
+        "matched" 若是 /test/
+    }
+    CODE
+    is $ast.EVAL, "matched", "若是";
+}
+
+# Test modifier-while (若成立就循环)
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    {
+        局部 $count = 0;
+        $count++ 若成立就循环 $count < 3;
+        $count
+    }()
+    CODE
+    is $ast.EVAL, 3, "若成立就循环";
+}
+
+# Test modifier-with (若定义且真)
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    "found" 若定义且真 "hello"
+    CODE
+    is $ast.EVAL, "found", "若定义且真";
+}
+
+# Test modifier-without (若未定义或假)
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    "not found" 若未定义或假 Nil
+    CODE
+    is $ast.EVAL, "not found", "若未定义或假";
+}
+
+# vim: expandtab shiftwidth=4
