@@ -1,0 +1,25 @@
+use Test;
+plan 2;
+
+# Test use
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    使用 lib <lib>;
+    "lib path added"
+    CODE
+    is $ast.EVAL, "lib path added", "使用";
+}
+
+# Test import
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    # Create a simple exportable sub for testing
+    module TestModule {
+        our sub test-export() { "exported function" }
+    }
+
+    导入 TestModule;
+    TestModule::test-export;
+    CODE
+    is $ast.EVAL, "exported function", "导入";
+}
