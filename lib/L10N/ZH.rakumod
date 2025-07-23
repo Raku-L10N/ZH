@@ -1,7 +1,7 @@
 # This file contains the ……… Slang of the Raku Programming Language
 
 #- start of generated part of localization ------------------------------------
-#- Generated on 2025-07-24T00:33:09+08:00 by update-localization.raku
+#- Generated on 2025-07-24T00:48:30+08:00 by update-localization.raku
 #- PLEASE DON'T CHANGE ANYTHING BELOW THIS LINE
 
 role L10N::ZH {
@@ -141,9 +141,9 @@ role L10N::ZH {
     token scope-constant { 常量}
     token scope-has { 属性}
     token scope-HAS { 属性自定义}
-    token scope-my { 私有的}
-    token scope-our { 公开的}
-    token scope-state { 持久状态}
+    token scope-my { 局部}
+    token scope-our { 公开}
+    token scope-state { 持续量}
     token scope-unit { 单元}
     token stmt-prefix-also { also}
     token stmt-prefix-do { do}
