@@ -1,0 +1,39 @@
+use Test;
+
+# Test 真 (True)
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    真
+    CODE
+    is $ast.EVAL, True, "真";
+}
+
+# Test 假 (False)
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    假
+    CODE
+    is $ast.EVAL, False, "假";
+}
+
+# Test 选项集 (enum)
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    选项集 Color <Red Green Blue>;
+    Color.enums.keys.sort.join(" ");
+    CODE
+    is $ast.EVAL, "Blue Green Red", "选项集";
+}
+
+# Test 子集 (subset)
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    子集 PositiveInt of Int where * > 0;
+    PositiveInt.^name;
+    CODE
+    is $ast.EVAL, "PositiveInt", "子集";
+}
+
+done-testing;
+
+# vim: expandtab shiftwidth=4
