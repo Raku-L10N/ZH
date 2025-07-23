@@ -377,7 +377,7 @@ block-without   若未定义或假
 # KEY                   TRANSLATION
 #enum-BigEndian          BigEndian
 #enum-Broken             Broken
-#enum-False              False
+enum-False               假
 #enum-FileChanged        FileChanged
 #enum-FileRenamed        FileRenamed
 #enum-Kept               Kept
@@ -390,7 +390,7 @@ block-without   若未定义或假
 #enum-SeekFromBeginning  SeekFromBeginning
 #enum-SeekFromCurrent    SeekFromCurrent
 #enum-SeekFromEnd        SeekFromEnd
-#enum-True               True
+enum-True                真
 
 # KEY             TRANSLATION
 #infix-(cont)      (cont)
@@ -783,8 +783,8 @@ scope-unit       单元
 #traitmod-trusts   trusts
 
 # KEY         TRANSLATION
-#typer-enum    enum
-#typer-subset  subset
+typer-enum    选项集
+typer-subset  子集
 
 # KEY        TRANSLATION
 use-import    导入

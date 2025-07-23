@@ -1,7 +1,7 @@
 # This file contains the ……… Slang of the Raku Programming Language
 
 #- start of generated part of localization ------------------------------------
-#- Generated on 2025-07-24T01:56:06+08:00 by update-localization.raku
+#- Generated on 2025-07-24T02:25:53+08:00 by update-localization.raku
 #- PLEASE DON'T CHANGE ANYTHING BELOW THIS LINE
 
 role L10N::ZH {
@@ -25,7 +25,7 @@ role L10N::ZH {
     token constraint-where { where}
     token enum-BigEndian { BigEndian}
     token enum-Broken { Broken}
-    token enum-False { False}
+    token enum-False { 假}
     token enum-FileChanged { FileChanged}
     token enum-FileRenamed { FileRenamed}
     token enum-Kept { Kept}
@@ -38,7 +38,7 @@ role L10N::ZH {
     token enum-SeekFromBeginning { SeekFromBeginning}
     token enum-SeekFromCurrent { SeekFromCurrent}
     token enum-SeekFromEnd { SeekFromEnd}
-    token enum-True { True}
+    token enum-True { 真}
     token infix-pcontp { "(cont)"}
     token infix-pelemp { "(elem)"}
     token infix-cff { "^ff"}
@@ -172,15 +172,23 @@ role L10N::ZH {
     token traitmod-of { of}
     token traitmod-returns { returns}
     token traitmod-trusts { trusts}
-    token typer-enum { enum}
-    token typer-subset { subset}
+    token typer-enum { 选项集}
+    token typer-subset { 子集}
     token use-import { 导入}
     token use-need { need}
     token use-no { no}
     token use-require { require}
     token use-use { 使用}
     method core2ast {
-        self.ast // RakuAST::Name.from-identifier(self.Str)
+        my constant %mapping = "终止循环", "last", "下一轮循环", "next", "重新此轮循环", "redo", "返回", "return";
+        my $ast := self.ast;
+        my $name := $ast ?? $ast.simple-identifier !! self.Str;
+        if %mapping{$name} -> $original {
+            RakuAST::Name.from-identifier($original)
+        }
+        else {
+            $ast // RakuAST::Name.from-identifier($name)
+        }
     }
     method trait-is2ast {
         self.ast // RakuAST::Name.from-identifier(self.Str)
