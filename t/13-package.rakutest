@@ -1,0 +1,57 @@
+use Test;
+plan 5;
+
+# Test 类 (class)
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    类 TestClass {
+        method greet() { "Hello from class" }
+    }
+
+    TestClass.new.greet
+    CODE
+    is $ast.EVAL, "Hello from class", "类";
+}
+
+# Test 模块 (module)
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    模块 TestModule2 { }
+    TestModule2.HOW.^name
+    CODE
+    like $ast.EVAL, rx/ModuleHOW/, "模块";
+}
+
+
+# Test 包 (package)
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    包 TestPackage2 { }
+    TestPackage2.HOW.^name
+    CODE
+    like $ast.EVAL, rx/PackageHOW/, "包";
+}
+
+
+# Test 能力 (role)
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    能力 TestRole2 { }
+    TestRole2.HOW.^name
+    CODE
+    like $ast.EVAL, rx/RoleGroupHOW|RoleHOW/, "能力";
+}
+
+
+# Test 语法 (grammar)
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    语法 TestGrammar2 {
+        token TOP { 'hello' }
+    }
+    TestGrammar2.parse('hello') ?? 'matched' !! 'no match'
+    CODE
+    is $ast.EVAL, "matched", "语法";
+}
+
+# vim: expandtab shiftwidth=4
