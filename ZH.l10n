@@ -703,12 +703,12 @@ package-role     能力
 #quote-lang-Ss  Ss
 
 # KEY              TRANSLATION
-#routine-method     method
-#routine-regex      regex
-#routine-rule       rule
-#routine-sub        sub
-#routine-submethod  submethod
-#routine-token      token
+routine-method     方法
+routine-regex      正则
+routine-rule       规则
+routine-sub        过程
+routine-submethod  非继承方法
+routine-token      符号
 
 # KEY           TRANSLATION
 scope-anon       匿名

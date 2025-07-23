@@ -1,7 +1,7 @@
 # This file contains the ……… Slang of the Raku Programming Language
 
 #- start of generated part of localization ------------------------------------
-#- Generated on 2025-07-24T01:16:47+08:00 by update-localization.raku
+#- Generated on 2025-07-24T01:20:23+08:00 by update-localization.raku
 #- PLEASE DON'T CHANGE ANYTHING BELOW THIS LINE
 
 role L10N::ZH {
@@ -130,12 +130,12 @@ role L10N::ZH {
     token quote-lang-S { S}
     token quote-lang-ss { ss}
     token quote-lang-Ss { Ss}
-    token routine-method { method}
-    token routine-regex { regex}
-    token routine-rule { rule}
-    token routine-sub { sub}
-    token routine-submethod { submethod}
-    token routine-token { token}
+    token routine-method { 方法}
+    token routine-regex { 正则}
+    token routine-rule { 规则}
+    token routine-sub { 过程}
+    token routine-submethod { 非继承方法}
+    token routine-token { 符号}
     token scope-anon { 匿名}
     token scope-augment { 增补}
     token scope-constant { 常量}
