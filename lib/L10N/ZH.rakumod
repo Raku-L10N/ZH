@@ -1,7 +1,7 @@
 # This file contains the ……… Slang of the Raku Programming Language
 
 #- start of generated part of localization ------------------------------------
-#- Generated on 2025-07-24T01:31:13+08:00 by update-localization.raku
+#- Generated on 2025-07-24T01:56:06+08:00 by update-localization.raku
 #- PLEASE DON'T CHANGE ANYTHING BELOW THIS LINE
 
 role L10N::ZH {
@@ -12,14 +12,14 @@ role L10N::ZH {
     token block-for { 对每个}
     token block-given { 针对}
     token block-if { 如果}
-    token block-loop { 循环}
+    token block-loop { 无条件循环}
     token block-orwith { 或用}
     token block-repeat { 重复执行}
     token block-unless { 如果不}
     token block-until { 直到}
     token block-when { 若是}
     token block-whenever { 每当}
-    token block-while { 若成立就循环}
+    token block-while { 有条件循环}
     token block-with { 若定义且真}
     token block-without { 若未定义或假}
     token constraint-where { where}
@@ -89,9 +89,9 @@ role L10N::ZH {
     token modifier-unless { 如果不}
     token modifier-until { 直到}
     token modifier-when { 若是}
-    token modifier-while { 若成立就循环}
-    token modifier-with { 若定义且真}
-    token modifier-without { 若未定义或假}
+    token modifier-while { 有条件循环}
+    token modifier-with { 若后者定义且真}
+    token modifier-without { 若后者未定义或假}
     token multi-multi { multi}
     token multi-only { only}
     token multi-proto { proto}
