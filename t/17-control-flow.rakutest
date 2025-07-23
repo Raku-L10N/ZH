@@ -1,0 +1,97 @@
+use Test;
+
+# Test 终止循环 (last)
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    {
+        局部 $result = "";
+        对每个 1..10 -> $i {
+            $result ~= $i;
+            如果 $i == 3 { 终止循环 }
+        }
+        $result;
+    }()
+    CODE
+    is $ast.EVAL, "123", "终止循环";
+}
+
+# Test 下一轮循环 (next)
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    {
+        局部 $result = "";
+        对每个 1..5 -> $i {
+            如果 $i == 3 { 下一轮循环 }
+            $result ~= $i;
+        }
+        $result;
+    }()
+    CODE
+    is $ast.EVAL, "1245", "下一轮循环";
+}
+
+# Test 重新此轮循环 (redo)
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    {
+        局部 $result = "";
+        局部 $redone = False;
+        对每个 1..3 -> $i {
+            如果 $i == 2 && !$redone {
+                $result ~= "再次";
+                $redone = True;
+                重新此轮循环;
+            }
+            $result ~= $i;
+        }
+        $result;
+    }()
+    CODE
+    is $ast.EVAL, "1再次23", "重新此轮循环";
+}
+
+# Test 返回 (return)
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    {
+        过程 test-return($x) {
+            如果 $x < 5 { 返回 "early" }
+            "normal";
+        }
+        test-return(3) ~ "," ~ test-return(7);
+    }()
+    CODE
+    is $ast.EVAL, "early,normal", "返回";
+}
+
+# Test 试试 (try)
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    {
+        局部 $result = 试试 { 10 / 2 };
+        $result // "failed";
+    }()
+    CODE
+    is $ast.EVAL, 5, "试试";
+}
+
+# Test 捕获错误 (CATCH)
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    {
+        局部 $result;
+        试试 {
+            die "test error";
+            捕获错误 {
+                若是 Exception { $result = "caught error" }
+            }
+        }
+        $result;
+    }()
+    CODE
+    is $ast.EVAL, "caught error", "捕获错误";
+}
+
+done-testing;
+
+# vim: expandtab shiftwidth=4
