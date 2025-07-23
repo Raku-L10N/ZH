@@ -710,15 +710,15 @@ block-without   若未定义或假
 #routine-token      token
 
 # KEY           TRANSLATION
-#scope-anon      anon
-#scope-augment   augment
-#scope-constant  constant
-#scope-has       has
-#scope-HAS       HAS
-#scope-my        my
-#scope-our       our
-#scope-state     state
-#scope-unit      unit
+scope-anon       匿名
+scope-augment    增补
+scope-constant   常量
+scope-has        属性
+scope-HAS        属性自定义
+scope-my         私有的
+scope-our        公开的
+scope-state      持久状态
+scope-unit       单元
 
 # KEY                TRANSLATION
 #stmt-prefix-also     also
