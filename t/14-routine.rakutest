@@ -1,0 +1,84 @@
+use Test;
+plan 6;
+
+# Test 过程 (sub)
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    过程 greet($name) {
+        "Hello, $name!"
+    }
+
+    greet("世界")
+    CODE
+    is $ast.EVAL, "Hello, 世界!", "过程";
+}
+
+# Test 方法 (method)
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    类 TestClass {
+        方法 say-hello() {
+            "Hello from method"
+        }
+    }
+
+    TestClass.new.say-hello
+    CODE
+    is $ast.EVAL, "Hello from method", "方法";
+}
+
+# Test 非继承方法 (submethod)
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    类 TestClass2 {
+        非继承方法 BUILD() {
+            "Built successfully"
+        }
+
+        方法 get-build-result() {
+            self.BUILD
+        }
+    }
+
+    TestClass2.new.get-build-result
+    CODE
+    is $ast.EVAL, "Built successfully", "非继承方法";
+}
+
+# Test 正则 (regex)
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    语法 TestGrammar {
+        正则 number { \d+ }
+    }
+
+    TestGrammar.parse("123", :rule<number>) ?? "matched" !! "no match"
+    CODE
+    is $ast.EVAL, "matched", "正则";
+}
+
+# Test 符号 (token)
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    语法 TestGrammar2 {
+        符号 word { \w+ }
+    }
+
+    TestGrammar2.parse("hello", :rule<word>) ?? "matched" !! "no match"
+    CODE
+    is $ast.EVAL, "matched", "符号";
+}
+
+# Test 规则 (rule)
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    语法 TestGrammar3 {
+        规则 words { \w+ }
+    }
+
+    TestGrammar3.parse("test", :rule<words>) ?? "matched" !! "no match"
+    CODE
+    is $ast.EVAL, "matched", "规则";
+}
+
+# vim: expandtab shiftwidth=4
