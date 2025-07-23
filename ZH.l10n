@@ -98,9 +98,9 @@ block-without   若未定义或假
 
 # KEY                  TRANSLATION
 #core-abs               abs
-#core-all               all
+core-all                所有
 #core-antipairs         antipairs
-#core-any               any
+core-any                任一
 #core-append            append
 #core-ast               ast
 #core-atomic-add-fetch  atomic-add-fetch
@@ -113,12 +113,12 @@ block-without   若未定义或假
 #core-atomic-fetch-sub  atomic-fetch-sub
 #core-atomic-inc-fetch  atomic-inc-fetch
 #core-atomic-sub-fetch  atomic-sub-fetch
-#core-await             await
+core-await              等待
 
 # KEY          TRANSLATION
 #core-bag       bag
 #core-bail-out  bail-out
-#core-bless     bless
+core-bless      造物
 
 # KEY              TRANSLATION
 #core-callframe     callframe
@@ -149,13 +149,13 @@ block-without   若未定义或假
 # KEY         TRANSLATION
 #core-decode   decode
 #core-deepmap  deepmap
-#core-defined  defined
-#core-diag     diag
-#core-die      die
+core-defined   是否定义
+core-diag      听诊
+core-die       崩溃
 #core-dies-ok  dies-ok
 #core-dir      dir
 #core-does-ok  does-ok
-#core-done     done
+core-done      收工
 #core-duckmap  duckmap
 
 # KEY               TRANSLATION
@@ -245,7 +245,7 @@ core-next         下一轮循环
 #core-nok         nok
 #core-none        none
 #core-not         not
-#core-note        note
+core-note         注意
 
 # KEY      TRANSLATION
 #core-ok    ok
@@ -264,8 +264,8 @@ core-next         下一轮循环
 #core-plan          plan
 #core-pop           pop
 #core-prepend       prepend
-#core-print         print
-#core-printf        printf
+core-print          打印
+core-printf         格式化打印
 #core-proceed       proceed
 #core-prompt        prompt
 #core-push          push
@@ -287,13 +287,14 @@ core-return       返回
 #core-rotate      rotate
 #core-round       round
 #core-roundrobin  roundrobin
-#core-run         run
+core-run          执行
 
 # KEY             TRANSLATION
 #core-samecase     samecase
 #core-samemark     samemark
 #core-samewith     samewith
-#core-say          say
+# '说' 实在是太突兀了
+core-say           述
 #core-set          set
 #core-shell        shell
 #core-shift        shift
@@ -331,7 +332,7 @@ core-return       返回
 
 # KEY               TRANSLATION
 #core-tail           tail
-#core-take           take
+core-take            收集值
 #core-take-rw        take-rw
 #core-tc             tc
 #core-tclc           tclc
@@ -367,7 +368,7 @@ core-return       返回
 #core-values  values
 
 # KEY          TRANSLATION
-#core-warn      warn
+core-warn       警告
 #core-wordcase  wordcase
 #core-words     words
 
@@ -452,9 +453,9 @@ modifier-with     若后者定义且真
 modifier-without  若后者未定义或假
 
 # KEY        TRANSLATION
-#multi-multi  multi
-#multi-only   only
-#multi-proto  proto
+multi-multi   多种之一
+multi-only     只用此
+#multi-proto   proto
 
 # KEY           TRANSLATION
 #named-absolute  absolute
@@ -650,7 +651,7 @@ package-package  包
 package-role     能力
 
 # KEY           TRANSLATION
-#phaser-BEGIN    BEGIN
+phaser-BEGIN     开始时
 phaser-CATCH     捕获错误
 phaser-CHECK     编译检查时
 phaser-CLOSE     收尾
@@ -725,7 +726,7 @@ scope-unit       单元
 #stmt-prefix-also     also
 #stmt-prefix-do       do
 #stmt-prefix-eager    eager
-#stmt-prefix-gather   gather
+stmt-prefix-gather    收集
 #stmt-prefix-hyper    hyper
 #stmt-prefix-lazy     lazy
 #stmt-prefix-quietly  quietly
@@ -751,7 +752,8 @@ stmt-prefix-try       试试
 #term-now      now
 #term-pi       pi
 #term-rand     rand
-#term-self     self
+# 似乎比自己、自身都要有意思一些，本对象如何如何...
+term-self      本对象
 #term-tau      tau
 #term-time     time
 
@@ -759,9 +761,9 @@ stmt-prefix-try       试试
 #trait-is-built                  built
 #trait-is-copy                   copy
 #trait-is-default                default
-#trait-is-DEPRECATED             DEPRECATED
+trait-is-DEPRECATED              不要用
 #trait-is-equiv                  equiv
-#trait-is-export                 export
+trait-is-export                  裸名导出
 #trait-is-hidden-from-backtrace  hidden-from-backtrace
 #trait-is-hidden-from-USAGE      hidden-from-USAGE
 #trait-is-implementation-detail  implementation-detail
@@ -774,7 +776,7 @@ stmt-prefix-try       试试
 #trait-is-tighter                tighter
 
 # KEY             TRANSLATION
-#traitmod-does     does
+traitmod-does      能够
 #traitmod-handles  handles
 #traitmod-hides    hides
 #traitmod-is       is

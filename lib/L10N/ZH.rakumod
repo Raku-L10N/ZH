@@ -1,7 +1,7 @@
 # This file contains the ……… Slang of the Raku Programming Language
 
 #- start of generated part of localization ------------------------------------
-#- Generated on 2025-07-24T02:44:05+08:00 by update-localization.raku
+#- Generated on 2025-07-24T03:54:49+08:00 by update-localization.raku
 #- PLEASE DON'T CHANGE ANYTHING BELOW THIS LINE
 
 role L10N::ZH {
@@ -92,32 +92,32 @@ role L10N::ZH {
     token modifier-while { 有条件循环}
     token modifier-with { 若后者定义且真}
     token modifier-without { 若后者未定义或假}
-    token multi-multi { multi}
-    token multi-only { only}
+    token multi-multi { 多种之一}
+    token multi-only { 只用此}
     token multi-proto { proto}
     token package-class { 类}
     token package-grammar { 语法}
     token package-module { 模块}
     token package-package { 包}
     token package-role { 能力}
-    token phaser-BEGIN { BEGIN}
+    token phaser-BEGIN { 开始时}
     token phaser-CATCH { 捕获错误}
-    token phaser-CHECK { CHECK}
-    token phaser-CLOSE { CLOSE}
-    token phaser-CONTROL { CONTROL}
-    token phaser-DOC { DOC}
-    token phaser-END { END}
-    token phaser-ENTER { ENTER}
-    token phaser-FIRST { FIRST}
-    token phaser-INIT { INIT}
-    token phaser-KEEP { KEEP}
-    token phaser-LAST { LAST}
-    token phaser-LEAVE { LEAVE}
-    token phaser-NEXT { NEXT}
-    token phaser-POST { POST}
-    token phaser-PRE { PRE}
-    token phaser-QUIT { QUIT}
-    token phaser-UNDO { UNDO}
+    token phaser-CHECK { 编译检查时}
+    token phaser-CLOSE { 收尾}
+    token phaser-CONTROL { 控制流处理}
+    token phaser-DOC { 文档}
+    token phaser-END { 结束时}
+    token phaser-ENTER { 进入时}
+    token phaser-FIRST { 首次进入时}
+    token phaser-INIT { 程序初始化时}
+    token phaser-KEEP { 正常退出时}
+    token phaser-LAST { 最后离开时}
+    token phaser-LEAVE { 离开时}
+    token phaser-NEXT { 下一轮前}
+    token phaser-POST { 后置条件}
+    token phaser-PRE { 前置条件}
+    token phaser-QUIT { 程序退出时}
+    token phaser-UNDO { 回滚}
     token prefix-not { not}
     token prefix-so { so}
     token quote-lang-m { m}
@@ -148,7 +148,7 @@ role L10N::ZH {
     token stmt-prefix-also { also}
     token stmt-prefix-do { do}
     token stmt-prefix-eager { eager}
-    token stmt-prefix-gather { gather}
+    token stmt-prefix-gather { 收集}
     token stmt-prefix-hyper { hyper}
     token stmt-prefix-lazy { lazy}
     token stmt-prefix-quietly { quietly}
@@ -162,10 +162,10 @@ role L10N::ZH {
     token term-now { now}
     token term-pi { pi}
     token term-rand { rand}
-    token term-self { self}
+    token term-self { 本对象}
     token term-tau { tau}
     token term-time { time}
-    token traitmod-does { does}
+    token traitmod-does { 能够}
     token traitmod-handles { handles}
     token traitmod-hides { hides}
     token traitmod-is { is}
@@ -180,7 +180,7 @@ role L10N::ZH {
     token use-require { require}
     token use-use { 使用}
     method core2ast {
-        my constant %mapping = "终止循环", "last", "下一轮循环", "next", "重新此轮循环", "redo", "返回", "return";
+        my constant %mapping = "所有", "all", "任一", "any", "等待", "await", "造物", "bless", "是否定义", "defined", "听诊", "diag", "崩溃", "die", "收工", "done", "终止循环", "last", "下一轮循环", "next", "注意", "note", "打印", "print", "格式化打印", "printf", "重新此轮循环", "redo", "返回", "return", "执行", "run", "述", "say", "收集值", "take", "警告", "warn";
         my $ast := self.ast;
         my $name := $ast ?? $ast.simple-identifier !! self.Str;
         if %mapping{$name} -> $original {
@@ -191,7 +191,15 @@ role L10N::ZH {
         }
     }
     method trait-is2ast {
-        self.ast // RakuAST::Name.from-identifier(self.Str)
+        my constant %mapping = "不要用", "DEPRECATED", "裸名导出", "export";
+        my $ast := self.ast;
+        my $name := $ast ?? $ast.simple-identifier !! self.Str;
+        if %mapping{$name} -> $original {
+            RakuAST::Name.from-identifier($original)
+        }
+        else {
+            $ast // RakuAST::Name.from-identifier($name)
+        }
     }
     method adverb-pc2str (str $key) {
         $key
