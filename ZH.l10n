@@ -214,7 +214,7 @@ block-without   若未定义或假
 #core-kv    kv
 
 # KEY          TRANSLATION
-#core-last      last
+core-last       终止循环
 #core-lastcall  lastcall
 #core-lc        lc
 #core-like      like
@@ -238,7 +238,7 @@ block-without   若未定义或假
 
 # KEY            TRANSLATION
 #core-new         new
-#core-next        next
+core-next         下一轮循环
 #core-nextcallee  nextcallee
 #core-nextsame    nextsame
 #core-nextwith    nextwith
@@ -273,11 +273,11 @@ block-without   若未定义或假
 
 # KEY            TRANSLATION
 #core-rand        rand
-#core-redo        redo
+core-redo         重新此轮循环
 #core-reduce      reduce
 #core-repeated    repeated
 #core-repl        repl
-#core-return      return
+core-return       返回
 #core-return-rw   return-rw
 #core-reverse     reverse
 #core-rindex      rindex
@@ -651,7 +651,7 @@ package-role     能力
 
 # KEY           TRANSLATION
 #phaser-BEGIN    BEGIN
-#phaser-CATCH    CATCH
+phaser-CATCH     捕获错误
 #phaser-CHECK    CHECK
 #phaser-CLOSE    CLOSE
 #phaser-CONTROL  CONTROL
@@ -734,7 +734,7 @@ scope-unit       单元
 #stmt-prefix-sink     sink
 #stmt-prefix-start    start
 #stmt-prefix-supply   supply
-#stmt-prefix-try      try
+stmt-prefix-try       试试
 
 # KEY               TRANSLATION
 #system-ACCEPTS      ACCEPTS
