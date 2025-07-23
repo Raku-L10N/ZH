@@ -1,0 +1,26 @@
+{
+  "auth": "zef:l10n",
+  "authors": [
+    "Aoran Zeng"
+  ],
+  "build-depends": [
+  ],
+  "depends": [
+  ],
+  "description": "Chinese localization of Raku",
+  "license": "Artistic-2.0",
+  "name": "L10N::ZH",
+  "perl": "6.d",
+  "provides": {
+    "L10N::ZH": "lib/L10N/ZH.rakumod",
+    "RakuAST::Deparse::L10N::ZH": "lib/RakuAST/Deparse/L10N/ZH.rakumod"
+  },
+  "resources": [
+  ],
+  "tags": [
+    "LOCALIZATION", "Chinese"
+  ],
+  "test-depends": [
+  ],
+  "version": "0.0.1"
+}

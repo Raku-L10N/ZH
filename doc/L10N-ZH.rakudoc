@@ -1,0 +1,40 @@
+=begin pod
+
+=head1 NAME
+
+L10N::ZH - Chinese localization of Raku
+
+=head1 SYNOPSIS
+
+=begin output
+$ chiku -e '' # please add a simple code example in the ZH localization
+=end output
+
+=begin code :lang<raku>
+
+use L10N::ZH;
+# please add a code example in the ZH localization
+
+=end code
+
+=head1 DESCRIPTION
+
+The C<L10N::ZH> distribution contains the logic to provide a Chinese
+localization of the Raku Programming Language.  It installs a
+C<chiku> executable that will automatically activate the Chinese
+localization.  And it allows one to use the Chinese localization
+in selected programs with a C<use L10N::ZH> statement.
+
+=head1 AUTHORS
+
+Aoran Zeng <l10n@raku.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+Copyright 2025 Raku Localization Team
+
+This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
+
+=end pod
+
+# vim: expandtab shiftwidth=4
