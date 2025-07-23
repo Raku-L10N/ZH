@@ -1,0 +1,35 @@
+use Test;
+plan 3;
+
+# Test 局部 (my) - local variables
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    局部 $local-var = "局部变量";
+    $local-var
+    CODE
+    is $ast.EVAL, "局部变量", "局部";
+}
+
+# Test 公开 (our) - package variables
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    公开 $public-var = "公开变量";
+    $public-var
+    CODE
+    is $ast.EVAL, "公开变量", "公开";
+}
+
+# Test 持续量 (state) - state variables in function
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    sub state-counter() {
+        持续量 $count = 0;
+        ++$count;
+    }
+
+    state-counter() ~ "," ~ state-counter() ~ "," ~ state-counter()
+    CODE
+    is $ast.EVAL, "1,2,3", "持续量";
+}
+
+# vim: expandtab shiftwidth=4
