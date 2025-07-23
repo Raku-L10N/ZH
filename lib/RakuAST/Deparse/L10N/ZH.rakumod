@@ -2,12 +2,13 @@
 # Programming Language.
 
 #- start of generated part of localization ------------------------------------
-#- Generated on 2025-07-23T22:07:23+08:00 by new-localization.raku
+#- Generated on 2025-07-23T23:01:19+08:00 by update-localization.raku
 #- PLEASE DON'T CHANGE ANYTHING BELOW THIS LINE
 
+my constant %xlation = "block-default", "其他情况", "block-else", "否则", "block-elsif", "否则如果", "block-for", "对于", "block-given", "针对", "block-if", "如果", "block-loop", "循环", "block-orwith", "或用", "block-repeat", "重复执行", "block-unless", "除非", "block-until", "直到", "block-when", "若是", "block-whenever", "每当", "block-while", "若成立就循环", "block-with", "若定义且真", "block-without", "若定义或假";
 role RakuAST::Deparse::L10N::ZH {
     method xsyn (str $prefix, str $key) {
-        $key
+                %xlation{"$prefix-$key"} // $key
     }
 }
 

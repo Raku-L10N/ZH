@@ -1,27 +1,27 @@
 # This file contains the ……… Slang of the Raku Programming Language
 
 #- start of generated part of localization ------------------------------------
-#- Generated on 2025-07-23T22:07:23+08:00 by new-localization.raku
+#- Generated on 2025-07-23T23:01:19+08:00 by update-localization.raku
 #- PLEASE DON'T CHANGE ANYTHING BELOW THIS LINE
 
 role L10N::ZH {
     use experimental :rakuast;
-    token block-default { default}
-    token block-else { else}
-    token block-elsif { elsif}
-    token block-for { for}
-    token block-given { given}
-    token block-if { if}
-    token block-loop { loop}
-    token block-orwith { orwith}
-    token block-repeat { repeat}
-    token block-unless { unless}
-    token block-until { until}
-    token block-when { when}
-    token block-whenever { whenever}
-    token block-while { while}
-    token block-with { with}
-    token block-without { without}
+    token block-default { 其他情况}
+    token block-else { 否则}
+    token block-elsif { 否则如果}
+    token block-for { 对于}
+    token block-given { 针对}
+    token block-if { 如果}
+    token block-loop { 循环}
+    token block-orwith { 或用}
+    token block-repeat { 重复执行}
+    token block-unless { 除非}
+    token block-until { 直到}
+    token block-when { 若是}
+    token block-whenever { 每当}
+    token block-while { 若成立就循环}
+    token block-with { 若定义且真}
+    token block-without { 若定义或假}
     token constraint-where { where}
     token enum-BigEndian { BigEndian}
     token enum-Broken { Broken}
