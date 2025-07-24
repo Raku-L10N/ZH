@@ -101,7 +101,9 @@ sub process($proc, $filename) {
 }
 
 sub install() {
-    my $zef  := $*DISTRO.is-win ?? 'zef.bat' !! 'zef';
+    # 本来这里写的是: 在Windows上用 zef.bat，但是实际上只有 zef.exe
+    # 所以我们不再区分
+    my $zef  := $*DISTRO.is-win ?? 'zef' !! 'zef';
     my $proc := run $zef, "install", ".", "--verbose", "--/test", :out,:err,:merge;
     process($proc, "*installation*");
 }
