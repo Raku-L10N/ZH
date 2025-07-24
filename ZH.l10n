@@ -651,16 +651,16 @@ package-package  包
 package-role     能力
 
 # KEY           TRANSLATION
-phaser-BEGIN     开始时
+phaser-BEGIN     编译时
 phaser-CATCH     捕获错误
-phaser-CHECK     编译检查时
+phaser-CHECK     编译完成时
 phaser-CLOSE     收尾
 phaser-CONTROL   控制流处理
 phaser-DOC       文档
 phaser-END       结束时
 phaser-ENTER     进入时
 phaser-FIRST     首次进入时
-phaser-INIT      程序初始化时
+phaser-INIT      程序运行前
 phaser-KEEP      正常退出时
 phaser-LAST      最后离开时
 phaser-LEAVE     离开时

@@ -1,7 +1,7 @@
 # This file contains the ……… Slang of the Raku Programming Language
 
 #- start of generated part of localization ------------------------------------
-#- Generated on 2025-07-24T03:54:49+08:00 by update-localization.raku
+#- Generated on 2025-07-24T17:38:30+08:00 by update-localization.raku
 #- PLEASE DON'T CHANGE ANYTHING BELOW THIS LINE
 
 role L10N::ZH {
@@ -100,16 +100,16 @@ role L10N::ZH {
     token package-module { 模块}
     token package-package { 包}
     token package-role { 能力}
-    token phaser-BEGIN { 开始时}
+    token phaser-BEGIN { 编译时}
     token phaser-CATCH { 捕获错误}
-    token phaser-CHECK { 编译检查时}
+    token phaser-CHECK { 编译完成时}
     token phaser-CLOSE { 收尾}
     token phaser-CONTROL { 控制流处理}
     token phaser-DOC { 文档}
     token phaser-END { 结束时}
     token phaser-ENTER { 进入时}
     token phaser-FIRST { 首次进入时}
-    token phaser-INIT { 程序初始化时}
+    token phaser-INIT { 程序运行前}
     token phaser-KEEP { 正常退出时}
     token phaser-LAST { 最后离开时}
     token phaser-LEAVE { 离开时}
