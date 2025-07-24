@@ -1,0 +1,46 @@
+use Test;
+
+# Test 所有 (all)
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    所有(1, 2, 3) > 0 ?? "真" !! "假";
+    CODE
+    is $ast.EVAL, "真", "所有";
+}
+
+# Test 任一 (any)
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    任一(0, 1, 2) > 1 ?? "真" !! "假";
+    CODE
+    is $ast.EVAL, "真", "任一";
+}
+
+# Test 是否定义 (defined)
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    是否定义("hello") ?? "已定义" !! "未定义";
+    CODE
+    is $ast.EVAL, "已定义", "是否定义";
+}
+
+# Test 是否定义 (defined) Nil
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    是否定义(Nil) ?? "已定义" !! "未定义";
+    CODE
+    is $ast.EVAL, "未定义", "是否定义 Nil";
+}
+
+# Test 等待 (await)
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    局部 $promise = Promise.kept(42);
+    等待 $promise;
+    CODE
+    is $ast.EVAL, 42, "等待";
+}
+
+done-testing;
+
+# vim: expandtab shiftwidth=4
