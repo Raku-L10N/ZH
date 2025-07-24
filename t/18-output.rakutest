@@ -1,0 +1,53 @@
+use Test;
+
+# Test 打印 (print)
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    打印 "测试"
+    CODE
+    lives-ok { $ast.EVAL }, "打印";
+}
+
+# Test 格式化打印 (printf)
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    格式化打印 "数字: %d", 42
+    CODE
+    lives-ok { $ast.EVAL }, "格式化打印";
+}
+
+# Test 述 (say)
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    述 "你好"
+    CODE
+    lives-ok { $ast.EVAL }, "述";
+}
+
+# Test 注意 (note)
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    注意 "注意信息"
+    CODE
+    lives-ok { $ast.EVAL }, "注意";
+}
+
+# Test 警告 (warn)
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    警告 "警告信息"
+    CODE
+    lives-ok { $ast.EVAL }, "警告";
+}
+
+# Test 执行 (run)
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    执行("echo", "hello").command.join(" ");
+    CODE
+    is $ast.EVAL, "echo hello", "执行";
+}
+
+done-testing;
+
+# vim: expandtab shiftwidth=4
