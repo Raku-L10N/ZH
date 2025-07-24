@@ -1,3 +1,5 @@
+[![Actions Status](https://github.com/ccmywish/ZH/actions/workflows/linux.yml/badge.svg)](https://github.com/ccmywish/ZH/actions) [![Actions Status](https://github.com/ccmywish/ZH/actions/workflows/macos.yml/badge.svg)](https://github.com/ccmywish/ZH/actions) [![Actions Status](https://github.com/ccmywish/ZH/actions/workflows/windows.yml/badge.svg)](https://github.com/ccmywish/ZH/actions)
+
 桃源语
 ===
 
