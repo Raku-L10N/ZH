@@ -1,21 +1,31 @@
 =begin pod
 
-=head1 名称
+=head1 桃源语
 
-L10N::ZH - Chinese localization of Raku
+=defn 桃源语
+用中文惬意地与计算机对话
 
-=head1 使用概要
+=head1 安装
+
+=item1 安装 L<Rakudo|https://rakudo.org>
+
+=begin item1
+安装 C<L10N::ZH> 模块
+
+    $ zef install L10N::ZH
+
+=end item1
+
+=head1 使用
 
 =begin output
-$ chiku -e '述 "你好，Raku!"'
+$ taoyuan -e '述 "你好，桃源!"'
 =end output
 
 =begin code :lang<raku>
-use L10N::ZH;
-
 如果 真 {
   对每个 1..3 -> $几 {
-    述 "第$几次：你好，Raku！";
+    述 "第{$几}次：你好，桃源！";
   }
 } 否则 {
     崩溃 "咱们的程序似乎出了点问题";
@@ -24,54 +34,52 @@ use L10N::ZH;
 
 =head1 描述
 
-C<L10N::ZH> 这个分发包提供了中文支持。它会安装一个 C<chiku> 可执行文件，这个文件会自动激活中文。它允许在选定我们的程序中使用 C<use L10N::ZH> 语句来使用中文。
+C<L10N::ZH> 这个包为 Raku 提供了中文支持，具体来说，是桃源语的支持。它会安装一个可执行文件: C<taoyuan> ，用户通过它来运行以 桃园语 (中文) 编写的 Raku 代码。
 
-
-=head1 翻译核心准则
+=head1 C<L10N::ZH> 翻译核心准则
 
 =begin item
-翻译力求本土化，所以需要严格使用中文的习惯，而 B<不是对单词直译>
+翻译力求本土化，严格遵循中文表达习惯，B<摒弃生硬的单词直译>
 
-比如 C<die> 应当被翻译为 B<崩溃>，而不是 B<死>
+比如 C<die> 翻译为 B<崩溃> 而非 B<死>，体现了中文语境下的自然表达
 =end item
 
 =begin item
-翻译必须配套，从整体性考量，多个翻译应该能连贯起来
+翻译讲究配套连贯，从整体语义考量，确保多个关键词能够形成流畅的表达链
 
-比如 C<when> 按照直译是 B<当>，但是在实际的使用场景中，它的右面都是具体的值或者类型判断，所以翻译为 B<若是>。
+比如 C<when> 直译为 B<当>，但在实际使用中，它后面总是跟随具体的值或类型判断，因此翻译为 B<若是> 更符合中文的条件判断表达。
 
-C<default> 按道理来讲应该翻译为 B<默认>，但是在实际的使用场景中，它是放在一串 B<若是> 后面的，所以翻译为 B<其他情况>。
+C<default> 本意为 B<默认>，但在语法结构中它紧跟一串 B<若是> 之后，翻译为 B<其他情况> 能与前文形成完整的逻辑呼应。
 
-通过这样整体性的翻译，完全放弃了直译，但是达到了良好的本土化表达效果:
+这种整体性翻译虽然完全摆脱了逐词对译，却达到了出色的本土化表达效果：
 
 =begin code :lang<raku>
 针对 $value {
-    若是 "Raku" { "匹配Raku" }
-    若是 "Ruby" { "匹配Ruby" }
-    其他情况    { "其他语言" }
+  若是 "Raku" { " say  'Hi'; " }
+  若是 "Ruby" { " puts 'Hi'  " }
+  若是 "桃源" { " 述    'Hi'; " }
+  其他情况    { "Console.WriteLine('Hi');" }
 }
 =end code
 =end item
 
 =begin item
-翻译尽量保持有趣
+翻译力求保持语言的趣味性
 
-这是一个有趣的语言，可以发现其英文的表达方式有很多有趣的地方，所以翻译也应该尽量保持有趣，我们不需要一个严格遵守原有单词直译，但使得生机尽失的机械语言。
+Raku 本身就是一门充满趣味的语言，其英文表达方式处处体现着编程的乐趣。桃源语也应当延续这种特质，让代码读起来生动有趣，而不是拘泥于死板的字面翻译，失去桃源语应有的灵动与活力。
 =end item
 
-=item 请写出测试用例或者实际代码案例来推敲翻译用语
+=item 请通过编写测试用例和实际代码示例来验证和完善翻译用语的准确性与实用性
 
 
 =head1 作者
 
 Aoran Zeng <ccmywish@qq.com>
 
-=head1 版权和许可
+=head1 版权和许可协议
 
-Copyright 2025 Raku Localization Team
+Copyright 2025 Aoran Zeng, Raku Localization Team
 
-This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
+该库为自由软件，您可以根据 Artistic License 2.0 对其进行重新分发和修改。
 
 =end pod
-
-# vim: expandtab shiftwidth=4
