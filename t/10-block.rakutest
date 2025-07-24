@@ -56,6 +56,33 @@ use Test;
     is $ast.EVAL, "值未定义", "若未定义或假";
 }
 
+# Test orwith
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+
+    如果 0 { "0" }
+    或用 Nil { "Nil" }
+    或用 1 { "1" };
+
+    CODE
+    is $ast.EVAL, "1", "或用";
+}
+
+# Test do with / orwith block
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    局部 $value;
+    局部 $result = do 若定义且真 $value {
+        "有值: $value"
+    } 或用 Nil {
+        "使用 Nil"
+    } 或用 "默认值" {
+        "使用默认值: $_"
+    }
+    CODE
+    is $ast.EVAL, "使用默认值: 默认值", "do 若定义且真 / 或用";
+}
+
 # Test given-when-default blocks
 {
     my $ast := Q:to/CODE/.AST("ZH");
@@ -150,6 +177,28 @@ use Test;
     }
     CODE
     is $ast.EVAL, "大于0但小于等于10", "嵌套如果";
+}
+
+# Test whenever block
+{
+    my $ast := Q:to/CODE/.AST("ZH");
+    局部 $chan = Channel.new;
+    局部 @results;
+    start {
+        react {
+            每当 $chan -> $value {
+                @results.push($value * 2);
+                如果 @results.elems >= 3 {收工}
+            }
+        }
+    }
+    $chan.send(1);
+    $chan.send(2);
+    $chan.send(3);
+    sleep 0.1;
+    @results.join(",")
+    CODE
+    is $ast.EVAL, "2,4,6", "每当";
 }
 
 done-testing;
