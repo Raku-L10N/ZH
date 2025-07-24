@@ -1,6 +1,6 @@
 #!/usr/bin/env raku
 
-# Executor for the Chinese localization of the Raku Programming Language
+# 桃源语
 
 %*ENV<RAKUDO_RAKUAST> = 1;
 %*ENV<RAKUDO_OPT>     = '-ML10N::ZH';
