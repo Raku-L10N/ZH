@@ -7,7 +7,7 @@
   ],
   "depends": [
   ],
-  "description": "Chinese localization of Raku",
+  "description": "TaoYuan, Chinese localization of Raku",
   "license": "Artistic-2.0",
   "name": "L10N::ZH",
   "perl": "6.d",
@@ -17,8 +17,10 @@
   },
   "resources": [
   ],
+  "source-url": "",
   "tags": [
-    "LOCALIZATION", "Chinese"
+    "LOCALIZATION",
+    "Chinese"
   ],
   "test-depends": [
   ],
