@@ -1,24 +1,13 @@
 use Test;
 
 my $ast := Q:to/CODE/.AST("ZH");
-如果 True {
-    say "中文本地化测试开始";
-}
-CODE
-$ast.EVAL;
-
-
-# Test a simple conditional block
-my $result = "";
-my $ast2 := Q:to/CODE/.AST("ZH");
 如果 1 == 1 {
     "条件测试通过"
 } 否则 {
     "条件测试失败"
 }
 CODE
-$result = $ast2.EVAL;
-is $result, "条件测试通过", "简单条件测试";
+is $ast.EVAL, "条件测试通过", "中文本地化测试开始";
 
 done-testing;
 

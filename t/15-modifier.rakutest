@@ -1,5 +1,4 @@
 use Test;
-plan 9;
 
 # Test modifier-for (对每个)
 {
@@ -86,5 +85,7 @@ plan 9;
     CODE
     is $ast.EVAL, "not found", "若后者未定义或假";
 }
+
+done-testing;
 
 # vim: expandtab shiftwidth=4
