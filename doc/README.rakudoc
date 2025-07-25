@@ -5,6 +5,10 @@
 =defn 桃源语
 用中文惬意地与计算机对话
 
+<br>
+
+
+
 =head1 安装
 
 =item1 安装 L<Rakudo|https://rakudo.org>
@@ -15,6 +19,10 @@
     $ zef install L10N::ZH
 
 =end item1
+
+<br>
+
+
 
 =head1 使用
 
@@ -31,6 +39,10 @@ $ taoyuan -e '述 "你好，桃源!"'
     崩溃 "咱们的程序似乎出了点问题";
 }
 =end code
+
+<br>
+
+
 
 =head1 描述
 
@@ -71,6 +83,9 @@ Raku 本身就是一门充满趣味的语言，其英文表达方式处处体现
 
 =item 请通过编写测试用例和实际代码示例来验证和完善翻译用语的准确性与实用性
 
+<br>
+
+
 
 =head1 作者
 
@@ -78,7 +93,7 @@ Aoran Zeng <ccmywish@qq.com>
 
 =head1 版权和许可协议
 
-Copyright 2025 Aoran Zeng, Raku Localization Team
+Copyright 2025 Raku Localization Team
 
 该库为自由软件，您可以根据 Artistic License 2.0 对其进行重新分发和修改。
 

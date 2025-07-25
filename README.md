@@ -7,6 +7,8 @@
 
 用中文惬意地与计算机对话
 
+<br>
+
 安装
 ==
 
@@ -15,6 +17,8 @@
   * 安装 `L10N::ZH` 模块
 
         $ zef install L10N::ZH
+
+<br>
 
 使用
 ==
@@ -30,6 +34,8 @@
     崩溃 "咱们的程序似乎出了点问题";
 }
 ```
+
+<br>
 
 描述
 ==
@@ -66,6 +72,8 @@
 
   * 请通过编写测试用例和实际代码示例来验证和完善翻译用语的准确性与实用性
 
+<br>
+
 作者
 ==
 
@@ -74,7 +82,7 @@ Aoran Zeng <ccmywish@qq.com>
 版权和许可协议
 =======
 
-Copyright 2025 Aoran Zeng, Raku Localization Team
+Copyright 2025 Raku Localization Team
 
 该库为自由软件，您可以根据 Artistic License 2.0 对其进行重新分发和修改。
 
