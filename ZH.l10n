@@ -243,13 +243,13 @@ core-next         下一轮循环
 #core-nextsame    nextsame
 #core-nextwith    nextwith
 #core-nok         nok
-#core-none        none
+core-none         没有一个
 #core-not         not
 core-note         注意
 
 # KEY      TRANSLATION
 #core-ok    ok
-#core-one   one
+core-one    恰好一个
 #core-open  open
 #core-ord   ord
 #core-ords  ords
@@ -293,7 +293,6 @@ core-run          执行
 #core-samecase     samecase
 #core-samemark     samemark
 #core-samewith     samewith
-# '说' 实在是太突兀了
 core-say           述
 #core-set          set
 #core-shell        shell
@@ -400,15 +399,15 @@ enum-True                真
 #infix-^ff^        ^ff^
 #infix-^fff        ^fff
 #infix-^fff^       ^fff^
-#infix-after       after
-#infix-and         and
-#infix-andthen     andthen
-#infix-before      before
-#infix-but         but
+infix-after        之后
+infix-and          和
+infix-andthen      那么然后
+infix-before       之前
+infix-but          但
 #infix-cmp         cmp
 #infix-coll        coll
 #infix-div         div
-#infix-does        does
+infix-does         能够
 #infix-eq          eq
 #infix-ff          ff
 #infix-ff^         ff^
@@ -428,8 +427,8 @@ enum-True                真
 #infix-ne          ne
 #infix-notandthen  notandthen
 #infix-o           o
-#infix-or          or
-#infix-orelse      orelse
+infix-or           或
+infix-orelse       不然的话
 #infix-unicmp      unicmp
 #infix-x           x
 #infix-X           X
@@ -453,7 +452,7 @@ modifier-with     若后者定义且真
 modifier-without  若后者未定义或假
 
 # KEY        TRANSLATION
-multi-multi   多种之一
+multi-multi    多个
 multi-only     只用此
 #multi-proto   proto
 
@@ -752,7 +751,6 @@ stmt-prefix-try       试试
 #term-now      now
 #term-pi       pi
 #term-rand     rand
-# 似乎比自己、自身都要有意思一些，本对象如何如何...
 term-self      本对象
 #term-tau      tau
 #term-time     time
@@ -760,8 +758,8 @@ term-self      本对象
 # KEY                           TRANSLATION
 #trait-is-built                  built
 #trait-is-copy                   copy
-#trait-is-default                default
-trait-is-DEPRECATED              不要用
+trait-is-default                 默认情况
+trait-is-DEPRECATED              弃用
 #trait-is-equiv                  equiv
 trait-is-export                  裸名导出
 #trait-is-hidden-from-backtrace  hidden-from-backtrace
@@ -777,11 +775,11 @@ trait-is-export                  裸名导出
 
 # KEY             TRANSLATION
 traitmod-does      能够
-#traitmod-handles  handles
-#traitmod-hides    hides
+traitmod-handles   委托责任给
+traitmod-hides     偷摸着继承
 #traitmod-is       is
 #traitmod-of       of
-#traitmod-returns  returns
+traitmod-returns   返回类型
 #traitmod-trusts   trusts
 
 # KEY         TRANSLATION
@@ -790,9 +788,9 @@ typer-subset  子集
 
 # KEY        TRANSLATION
 use-import    导入
-#use-need     need
+use-need      我需要
 #use-no       no
-#use-require  require
+use-require   快给我
 use-use       使用
 
 # vim: expandtab shiftwidth=4
