@@ -1,7 +1,7 @@
 # This file contains the ……… Slang of the Raku Programming Language
 
 #- start of generated part of localization ------------------------------------
-#- Generated on 2025-07-24T17:38:30+08:00 by update-localization.raku
+#- Generated on 2025-07-26T01:12:23+08:00 by update-localization.raku
 #- PLEASE DON'T CHANGE ANYTHING BELOW THIS LINE
 
 role L10N::ZH {
@@ -45,15 +45,15 @@ role L10N::ZH {
     token infix-cffc { "^ff^"}
     token infix-cfff { "^fff"}
     token infix-cfffc { "^fff^"}
-    token infix-after { after}
-    token infix-and { and}
-    token infix-andthen { andthen}
-    token infix-before { before}
-    token infix-but { but}
+    token infix-after { 之后}
+    token infix-and { 和}
+    token infix-andthen { 那么然后}
+    token infix-before { 之前}
+    token infix-but { 但}
     token infix-cmp { cmp}
     token infix-coll { coll}
     token infix-div { div}
-    token infix-does { does}
+    token infix-does { 能够}
     token infix-eq { eq}
     token infix-ff { ff}
     token infix-ffc { "ff^"}
@@ -73,8 +73,8 @@ role L10N::ZH {
     token infix-ne { ne}
     token infix-notandthen { notandthen}
     token infix-o { o}
-    token infix-or { or}
-    token infix-orelse { orelse}
+    token infix-or { 或}
+    token infix-orelse { 不然的话}
     token infix-unicmp { unicmp}
     token infix-x { x}
     token infix-X { X}
@@ -92,7 +92,7 @@ role L10N::ZH {
     token modifier-while { 有条件循环}
     token modifier-with { 若后者定义且真}
     token modifier-without { 若后者未定义或假}
-    token multi-multi { 多种之一}
+    token multi-multi { 多个}
     token multi-only { 只用此}
     token multi-proto { proto}
     token package-class { 类}
@@ -103,21 +103,21 @@ role L10N::ZH {
     token phaser-BEGIN { 编译时}
     token phaser-CATCH { 捕获错误}
     token phaser-CHECK { 编译完成时}
-    token phaser-CLOSE { 收尾}
-    token phaser-CONTROL { 控制流处理}
+    token phaser-CLOSE { 供应结束时}
+    token phaser-CONTROL { 控制流异常时}
     token phaser-DOC { 文档}
-    token phaser-END { 结束时}
-    token phaser-ENTER { 进入时}
-    token phaser-FIRST { 首次进入时}
+    token phaser-END { 程序结束时}
+    token phaser-ENTER { 每次进入块时}
+    token phaser-FIRST { 循环开始前}
     token phaser-INIT { 程序运行前}
-    token phaser-KEEP { 正常退出时}
-    token phaser-LAST { 最后离开时}
-    token phaser-LEAVE { 离开时}
-    token phaser-NEXT { 下一轮前}
-    token phaser-POST { 后置条件}
-    token phaser-PRE { 前置条件}
-    token phaser-QUIT { 程序退出时}
-    token phaser-UNDO { 回滚}
+    token phaser-KEEP { 每次块功成身退时}
+    token phaser-LAST { 循环或供应结束后}
+    token phaser-LEAVE { 每次退出块时}
+    token phaser-NEXT { 循环下一轮前}
+    token phaser-POST { 块后置条件}
+    token phaser-PRE { 块前置条件}
+    token phaser-QUIT { 供应提前终止}
+    token phaser-UNDO { 每次块功败而归时}
     token prefix-not { not}
     token prefix-so { so}
     token quote-lang-m { m}
@@ -166,21 +166,21 @@ role L10N::ZH {
     token term-tau { tau}
     token term-time { time}
     token traitmod-does { 能够}
-    token traitmod-handles { handles}
-    token traitmod-hides { hides}
+    token traitmod-handles { 委托责任给}
+    token traitmod-hides { 偷摸着继承}
     token traitmod-is { is}
     token traitmod-of { of}
-    token traitmod-returns { returns}
+    token traitmod-returns { 返回类型}
     token traitmod-trusts { trusts}
     token typer-enum { 选项集}
     token typer-subset { 子集}
     token use-import { 导入}
-    token use-need { need}
+    token use-need { 我需要}
     token use-no { no}
-    token use-require { require}
+    token use-require { 快给我}
     token use-use { 使用}
     method core2ast {
-        my constant %mapping = "所有", "all", "任一", "any", "等待", "await", "造物", "bless", "是否定义", "defined", "听诊", "diag", "崩溃", "die", "收工", "done", "终止循环", "last", "下一轮循环", "next", "注意", "note", "打印", "print", "格式化打印", "printf", "重新此轮循环", "redo", "返回", "return", "执行", "run", "述", "say", "收集值", "take", "警告", "warn";
+        my constant %mapping = "所有", "all", "任一", "any", "等待", "await", "造物", "bless", "是否定义", "defined", "听诊", "diag", "崩溃", "die", "收工", "done", "终止循环", "last", "下一轮循环", "next", "没有一个", "none", "注意", "note", "恰好一个", "one", "打印", "print", "格式化打印", "printf", "重新此轮循环", "redo", "返回", "return", "执行", "run", "述", "say", "收集值", "take", "警告", "warn";
         my $ast := self.ast;
         my $name := $ast ?? $ast.simple-identifier !! self.Str;
         if %mapping{$name} -> $original {
@@ -191,7 +191,7 @@ role L10N::ZH {
         }
     }
     method trait-is2ast {
-        my constant %mapping = "不要用", "DEPRECATED", "裸名导出", "export";
+        my constant %mapping = "默认情况", "default", "弃用", "DEPRECATED", "裸名导出", "export";
         my $ast := self.ast;
         my $name := $ast ?? $ast.simple-identifier !! self.Str;
         if %mapping{$name} -> $original {
