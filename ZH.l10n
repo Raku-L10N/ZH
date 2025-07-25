@@ -654,21 +654,21 @@ package-role     能力
 phaser-BEGIN     编译时
 phaser-CATCH     捕获错误
 phaser-CHECK     编译完成时
-phaser-CLOSE     收尾
-phaser-CONTROL   控制流处理
+phaser-CLOSE     供应结束时
+phaser-CONTROL   控制流异常时
 phaser-DOC       文档
-phaser-END       结束时
-phaser-ENTER     进入时
-phaser-FIRST     首次进入时
+phaser-END       程序结束时
+phaser-ENTER     每次进入块时
+phaser-FIRST     循环开始前
 phaser-INIT      程序运行前
-phaser-KEEP      正常退出时
-phaser-LAST      最后离开时
-phaser-LEAVE     离开时
-phaser-NEXT      下一轮前
-phaser-POST      后置条件
-phaser-PRE       前置条件
-phaser-QUIT      程序退出时
-phaser-UNDO      回滚
+phaser-KEEP      每次块功成身退时
+phaser-LAST      循环或供应结束后
+phaser-LEAVE     每次退出块时
+phaser-NEXT      循环下一轮前
+phaser-POST      块后置条件
+phaser-PRE       块前置条件
+phaser-QUIT      供应提前终止
+phaser-UNDO      每次块功败而归时
 
 # KEY                      TRANSLATION
 #pragma-dynamic-scope       dynamic-scope
