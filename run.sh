@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
-# 用该脚本来执行 example/ 中的例子
+##############################################
+# Use this script to run the files in example/
+#
+# E.g.
+#       ./run.sh ./example/readme.raku
+##############################################
+
+raku -Ilib -e 'use L10N::ZH'
 
 raku ./bin/taoyuan -Ilib $*
