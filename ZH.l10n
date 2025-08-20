@@ -789,9 +789,9 @@ typer-subset  子集
 
 # KEY        TRANSLATION
 use-import    导入
-use-need      我需要
-#use-no       no
-use-require   快给我
+use-need      依赖于
+use-no        不使用
+use-require   动态使用
 use-use       使用
 
 # vim: expandtab shiftwidth=4
