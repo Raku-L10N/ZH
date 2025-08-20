@@ -402,7 +402,7 @@ enum-True                真
 #infix-^fff^       ^fff^
 infix-after        之后
 infix-and          和
-infix-andthen      那么然后
+infix-andthen      然后
 infix-before       之前
 infix-but          但
 #infix-cmp         cmp
