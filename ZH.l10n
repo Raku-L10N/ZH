@@ -171,7 +171,7 @@ core-done      收工
 #core-expmod         expmod
 
 # KEY              TRANSLATION
-#core-fail          fail
+core-fail           失败 | fail
 #core-fails-like    fails-like
 #core-fc            fc
 #core-first         first
@@ -267,7 +267,7 @@ core-one    恰好一个
 #core-prepend       prepend
 core-print          打印
 core-printf         格式化打印
-#core-proceed       proceed
+core-proceed        继续 | proceed
 #core-prompt        prompt
 #core-push          push
 #core-put           put
@@ -326,7 +326,7 @@ core-say           述
 #core-substr-eq    substr-eq
 #core-substr-rw    substr-rw
 #core-subtest      subtest
-#core-succeed      succeed
+core-succeed       完成 | succeed
 #core-sum          sum
 #core-symlink      symlink
 
@@ -455,7 +455,7 @@ modifier-without  若后者未定义或假
 # KEY        TRANSLATION
 multi-multi    多个
 multi-only     只用此
-#multi-proto   proto
+multi-proto    分派原型
 
 # KEY           TRANSLATION
 #named-absolute  absolute
@@ -739,7 +739,7 @@ stmt-prefix-try       试试
 
 # KEY               TRANSLATION
 #system-ACCEPTS      ACCEPTS
-#system-BUILD        BUILD
+system-BUILD         构造对象 | BUILD
 #system-CALL-ME      CALL-ME
 #system-COERCE       COERCE
 #system-FALLBACK     FALLBACK
@@ -770,7 +770,7 @@ trait-is-export                  裸名导出
 #trait-is-nodal                  nodal
 #trait-is-pure                   pure
 #trait-is-raw                    raw
-#trait-is-rw                     rw
+trait-is-rw                      可写 | rw
 #trait-is-test-assertion         test-assertion
 #trait-is-tighter                tighter
 
