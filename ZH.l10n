@@ -713,15 +713,15 @@ routine-submethod  非继承方法
 routine-token      符号
 
 # KEY           TRANSLATION
-scope-anon       匿名
-scope-augment    增补
-scope-constant   常量
-scope-has        属性
-scope-HAS        属性自定义
-scope-my         局部
-scope-our        公开
-scope-state      持续量
-scope-unit       单元
+scope-anon       匿名 | anon
+scope-augment    增补 | augment
+scope-constant   常量 | constant
+scope-has        属性 | has
+scope-HAS        属性自定义 | HAS
+scope-my         局部 | my
+scope-our        公开 | our
+scope-state      持续量 | state
+scope-unit       单元 | unit
 
 # KEY                TRANSLATION
 #stmt-prefix-also     also
