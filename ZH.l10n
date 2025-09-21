@@ -265,12 +265,12 @@ core-one    恰好一个
 #core-plan          plan
 #core-pop           pop
 #core-prepend       prepend
-core-print          打印
-core-printf         格式化打印
+core-print          打印 | print
+core-printf         格式化打印 | printf
 core-proceed        继续 | proceed
-#core-prompt        prompt
+core-prompt         提示输入 | prompt
 #core-push          push
-#core-put           put
+core-put            输出 | put
 
 # KEY            TRANSLATION
 #core-rand        rand
