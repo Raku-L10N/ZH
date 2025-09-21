@@ -713,29 +713,31 @@ routine-submethod  非继承方法
 routine-token      符号
 
 # KEY           TRANSLATION
-scope-anon       匿名 | anon
-scope-augment    增补 | augment
-scope-constant   常量 | constant
-scope-has        属性 | has
-scope-HAS        属性自定义 | HAS
-scope-my         局部 | my
-scope-our        公开 | our
-scope-state      持续量 | state
-scope-unit       单元 | unit
+# 2025-09-21: 无法使用 |
+scope-anon       匿名
+scope-augment    增补
+scope-constant   常量
+scope-has        属性
+scope-HAS        属性自定义
+scope-my         局部
+scope-our        公开
+scope-state      持续量
+scope-unit       单元
 
 # KEY                TRANSLATION
+# 2025-09-21: 无法使用 |
 #stmt-prefix-also     also
-stmt-prefix-do        转换为值 | do
-stmt-prefix-eager     殷勤 | eager
-stmt-prefix-gather    收集 | gather
+stmt-prefix-do        转换为值
+stmt-prefix-eager     殷勤
+stmt-prefix-gather    收集
 #stmt-prefix-hyper    hyper
-stmt-prefix-lazy      偷懒 | lazy
-stmt-prefix-quietly   安静地 | quietly
+stmt-prefix-lazy      偷懒
+stmt-prefix-quietly   安静地
 #stmt-prefix-race     race
-stmt-prefix-react     反应 | react
-stmt-prefix-sink      抛弃返回值 | sink
-stmt-prefix-start     开始 | start
-stmt-prefix-supply    供应 | supply
+stmt-prefix-react     反应
+stmt-prefix-sink      抛弃返回值
+stmt-prefix-start     开始
+stmt-prefix-supply    供应
 stmt-prefix-try       试试
 
 # KEY               TRANSLATION

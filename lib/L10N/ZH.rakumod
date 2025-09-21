@@ -1,7 +1,7 @@
 # This file contains the ……… Slang of the Raku Programming Language
 
 #- start of generated part of localization ------------------------------------
-#- Generated on 2025-09-21T12:41:56+08:00 by update-localization.raku
+#- Generated on 2025-09-21T13:00:41+08:00 by update-localization.raku
 #- PLEASE DON'T CHANGE ANYTHING BELOW THIS LINE
 
 role L10N::ZH {
@@ -146,17 +146,17 @@ role L10N::ZH {
     token scope-state { 持续量}
     token scope-unit { 单元}
     token stmt-prefix-also { also}
-    token stmt-prefix-do { do}
-    token stmt-prefix-eager { eager}
+    token stmt-prefix-do { 转换为值}
+    token stmt-prefix-eager { 殷勤}
     token stmt-prefix-gather { 收集}
     token stmt-prefix-hyper { hyper}
-    token stmt-prefix-lazy { lazy}
-    token stmt-prefix-quietly { quietly}
+    token stmt-prefix-lazy { 偷懒}
+    token stmt-prefix-quietly { 安静地}
     token stmt-prefix-race { race}
-    token stmt-prefix-react { react}
-    token stmt-prefix-sink { sink}
-    token stmt-prefix-start { start}
-    token stmt-prefix-supply { supply}
+    token stmt-prefix-react { 反应}
+    token stmt-prefix-sink { 抛弃返回值}
+    token stmt-prefix-start { 开始}
+    token stmt-prefix-supply { 供应}
     token stmt-prefix-try { 试试}
     token term-nano { nano}
     token term-now { now}
