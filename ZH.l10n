@@ -743,8 +743,8 @@ stmt-prefix-try       试试
 #system-CALL-ME      CALL-ME
 #system-COERCE       COERCE
 #system-FALLBACK     FALLBACK
-#system-MAIN         MAIN
-#system-TWEAK        TWEAK
+system-MAIN          程序入口 | MAIN
+system-TWEAK         调整对象 | TWEAK
 #system-UPGRADE-RAT  UPGRADE-RAT
 
 # KEY         TRANSLATION
