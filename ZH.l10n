@@ -377,17 +377,17 @@ core-warn       警告
 
 # KEY                   TRANSLATION
 #enum-BigEndian          BigEndian
-#enum-Broken             Broken
+enum-Broken              失约
 enum-False               假
 #enum-FileChanged        FileChanged
 #enum-FileRenamed        FileRenamed
-#enum-Kept               Kept
-#enum-Less               Less
+enum-Kept                履约
+enum-Less                少
 #enum-LittleEndian       LittleEndian
-#enum-More               More
+enum-More                多
 #enum-NativeEndian       NativeEndian
-#enum-Planned            Planned
-#enum-Same               Same
+enum-Planned             准备中
+enum-Same                相等
 #enum-SeekFromBeginning  SeekFromBeginning
 #enum-SeekFromCurrent    SeekFromCurrent
 #enum-SeekFromEnd        SeekFromEnd
