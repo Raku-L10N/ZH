@@ -1,7 +1,7 @@
 # This file contains the ……… Slang of the Raku Programming Language
 
 #- start of generated part of localization ------------------------------------
-#- Generated on 2025-07-26T01:12:23+08:00 by update-localization.raku
+#- Generated on 2025-09-21T12:41:56+08:00 by update-localization.raku
 #- PLEASE DON'T CHANGE ANYTHING BELOW THIS LINE
 
 role L10N::ZH {
@@ -24,17 +24,17 @@ role L10N::ZH {
     token block-without { 若未定义或假}
     token constraint-where { where}
     token enum-BigEndian { BigEndian}
-    token enum-Broken { Broken}
+    token enum-Broken { 失约}
     token enum-False { 假}
     token enum-FileChanged { FileChanged}
     token enum-FileRenamed { FileRenamed}
-    token enum-Kept { Kept}
-    token enum-Less { Less}
+    token enum-Kept { 履约}
+    token enum-Less { 少}
     token enum-LittleEndian { LittleEndian}
-    token enum-More { More}
+    token enum-More { 多}
     token enum-NativeEndian { NativeEndian}
-    token enum-Planned { Planned}
-    token enum-Same { Same}
+    token enum-Planned { 准备中}
+    token enum-Same { 相等}
     token enum-SeekFromBeginning { SeekFromBeginning}
     token enum-SeekFromCurrent { SeekFromCurrent}
     token enum-SeekFromEnd { SeekFromEnd}
@@ -47,7 +47,7 @@ role L10N::ZH {
     token infix-cfffc { "^fff^"}
     token infix-after { 之后}
     token infix-and { 和}
-    token infix-andthen { 那么然后}
+    token infix-andthen { 然后}
     token infix-before { 之前}
     token infix-but { 但}
     token infix-cmp { cmp}
@@ -94,7 +94,7 @@ role L10N::ZH {
     token modifier-without { 若后者未定义或假}
     token multi-multi { 多个}
     token multi-only { 只用此}
-    token multi-proto { proto}
+    token multi-proto { 分派原型}
     token package-class { 类}
     token package-grammar { 语法}
     token package-module { 模块}
@@ -175,12 +175,12 @@ role L10N::ZH {
     token typer-enum { 选项集}
     token typer-subset { 子集}
     token use-import { 导入}
-    token use-need { 我需要}
-    token use-no { no}
-    token use-require { 快给我}
+    token use-need { 依赖于}
+    token use-no { 不使用}
+    token use-require { 动态使用}
     token use-use { 使用}
     method core2ast {
-        my constant %mapping = "所有", "all", "任一", "any", "等待", "await", "造物", "bless", "是否定义", "defined", "听诊", "diag", "崩溃", "die", "收工", "done", "终止循环", "last", "下一轮循环", "next", "没有一个", "none", "注意", "note", "恰好一个", "one", "打印", "print", "格式化打印", "printf", "重新此轮循环", "redo", "返回", "return", "执行", "run", "述", "say", "收集值", "take", "警告", "warn";
+        my constant %mapping = "所有", "all", "任一", "any", "等待", "await", "造物", "bless", "是否定义", "defined", "听诊", "diag", "崩溃", "die", "收工", "done", "失败", "fail", "fail", "fail", "终止循环", "last", "下一轮循环", "next", "没有一个", "none", "注意", "note", "恰好一个", "one", "打印", "print", "print", "print", "格式化打印", "printf", "printf", "printf", "继续", "proceed", "proceed", "proceed", "提示输入", "prompt", "prompt", "prompt", "输出", "put", "put", "put", "重新此轮循环", "redo", "返回", "return", "执行", "run", "述", "say", "完成", "succeed", "succeed", "succeed", "收集值", "take", "警告", "warn";
         my $ast := self.ast;
         my $name := $ast ?? $ast.simple-identifier !! self.Str;
         if %mapping{$name} -> $original {
@@ -191,7 +191,7 @@ role L10N::ZH {
         }
     }
     method trait-is2ast {
-        my constant %mapping = "默认情况", "default", "弃用", "DEPRECATED", "裸名导出", "export";
+        my constant %mapping = "默认情况", "default", "弃用", "DEPRECATED", "裸名导出", "export", "可写", "rw", "rw", "rw";
         my $ast := self.ast;
         my $name := $ast ?? $ast.simple-identifier !! self.Str;
         if %mapping{$name} -> $original {
@@ -202,7 +202,8 @@ role L10N::ZH {
         }
     }
     method adverb-pc2str (str $key) {
-        $key
+        my constant %mapping = "删除", "delete", "是否存在", "exists";
+        %mapping{$key} // $key
     }
     method adverb-q2str (str $key) {
         $key
@@ -217,7 +218,8 @@ role L10N::ZH {
         $key
     }
     method system2str (str $key) {
-        $key
+        my constant %mapping = "构造对象", "BUILD", "BUILD", "BUILD", "程序入口", "MAIN", "MAIN", "MAIN", "调整对象", "TWEAK", "TWEAK", "TWEAK";
+        %mapping{$key} // $key
     }
 }
 

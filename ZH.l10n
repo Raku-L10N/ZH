@@ -94,7 +94,8 @@ block-with      若定义且真
 block-without   若未定义或假
 
 # KEY             TRANSLATION
-constraint-where  限制条件为 | where
+# 2025-09-21: 似乎暂时不能翻译此
+# constraint-where  限制条件为 | where
 
 # KEY                  TRANSLATION
 #core-abs               abs
