@@ -184,8 +184,8 @@ use Test;
     my $ast := Q:to/CODE/.AST("ZH");
     局部 $chan = Channel.new;
     局部 @results;
-    start {
-        react {
+    开始 {
+        反应 {
             每当 $chan -> $value {
                 @results.push($value * 2);
                 如果 @results.elems >= 3 {收工}
