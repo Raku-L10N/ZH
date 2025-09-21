@@ -1,3 +1,5 @@
+[![Actions Status](https://github.com/Raku-L10N/ZH/actions/workflows/linux.yml/badge.svg)](https://github.com/Raku-L10N/ZH/actions) [![Actions Status](https://github.com/Raku-L10N/ZH/actions/workflows/macos.yml/badge.svg)](https://github.com/Raku-L10N/ZH/actions) [![Actions Status](https://github.com/Raku-L10N/ZH/actions/workflows/windows.yml/badge.svg)](https://github.com/Raku-L10N/ZH/actions)
+
 桃源语
 ===
 
