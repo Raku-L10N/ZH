@@ -94,7 +94,7 @@ block-with      若定义且真
 block-without   若未定义或假
 
 # KEY             TRANSLATION
-#constraint-where  where
+constraint-where  限制条件为 | where
 
 # KEY                  TRANSLATION
 #core-abs               abs
