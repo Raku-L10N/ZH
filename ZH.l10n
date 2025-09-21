@@ -6,8 +6,8 @@
 # See https://github.com/Raku-L10N/L10N/ for more information
 
 # KEY             TRANSLATION
-#adverb-pc-delete  delete
-#adverb-pc-exists  exists
+adverb-pc-delete  删除
+adverb-pc-exists  是否存在
 #adverb-pc-k       k
 #adverb-pc-kv      kv
 #adverb-pc-p       p
