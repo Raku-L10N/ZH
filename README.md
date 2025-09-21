@@ -1,5 +1,3 @@
-[![Actions Status](https://github.com/Raku-L10N/ZH/actions/workflows/linux.yml/badge.svg)](https://github.com/Raku-L10N/ZH/actions) [![Actions Status](https://github.com/Raku-L10N/ZH/actions/workflows/macos.yml/badge.svg)](https://github.com/Raku-L10N/ZH/actions) [![Actions Status](https://github.com/Raku-L10N/ZH/actions/workflows/windows.yml/badge.svg)](https://github.com/Raku-L10N/ZH/actions)
-
 桃源语
 ===
 
@@ -23,9 +21,21 @@
 使用
 ==
 
-    $ taoyuan -e '述 "你好，桃源!"'
+    $ taoyuan -e '述 q/你好，桃源!/'
 
 ```raku
+类 程序员 {
+
+  属性 $.姓名 = '桃源';
+  属性 @.使用的语言 = <桃源 Raku>;
+
+  方法 主语言 { @.使用的语言[0]; }
+}
+
+局部 $我 = 程序员.new;
+
+输出 Q/我的主力编程语言是: /, $我.主语言;
+
 如果 真 {
   对每个 1..3 -> $几 {
     述 "第{$几}次：你好，桃源！";
