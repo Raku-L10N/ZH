@@ -725,17 +725,17 @@ scope-unit       单元 | unit
 
 # KEY                TRANSLATION
 #stmt-prefix-also     also
-#stmt-prefix-do       do
-#stmt-prefix-eager    eager
-stmt-prefix-gather    收集
+stmt-prefix-do        转换为值 | do
+stmt-prefix-eager     殷勤 | eager
+stmt-prefix-gather    收集 | gather
 #stmt-prefix-hyper    hyper
-#stmt-prefix-lazy     lazy
-#stmt-prefix-quietly  quietly
+stmt-prefix-lazy      偷懒 | lazy
+stmt-prefix-quietly   安静地 | quietly
 #stmt-prefix-race     race
-#stmt-prefix-react    react
-#stmt-prefix-sink     sink
-#stmt-prefix-start    start
-#stmt-prefix-supply   supply
+stmt-prefix-react     反应 | react
+stmt-prefix-sink      抛弃返回值 | sink
+stmt-prefix-start     开始 | start
+stmt-prefix-supply    供应 | supply
 stmt-prefix-try       试试
 
 # KEY               TRANSLATION
