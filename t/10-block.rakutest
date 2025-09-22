@@ -140,7 +140,7 @@ use Test;
     my $ast := Q:to/CODE/.AST("ZH");
     局部 $count = 0;
     局部 @result;
-    无条件循环 {
+    循环 {
         @result.push($count);
         $count++;
         如果 $count >= 3 {last;}
