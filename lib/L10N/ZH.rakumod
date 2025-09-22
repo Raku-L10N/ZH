@@ -1,7 +1,7 @@
 # This file contains the ……… Slang of the Raku Programming Language
 
 #- start of generated part of localization ------------------------------------
-#- Generated on 2025-09-21T13:00:41+08:00 by update-localization.raku
+#- Generated on 2025-09-22T18:25:57+08:00 by update-localization.raku
 #- PLEASE DON'T CHANGE ANYTHING BELOW THIS LINE
 
 role L10N::ZH {
@@ -12,7 +12,7 @@ role L10N::ZH {
     token block-for { 对每个}
     token block-given { 针对}
     token block-if { 如果}
-    token block-loop { 无条件循环}
+    token block-loop { 循环}
     token block-orwith { 或用}
     token block-repeat { 重复执行}
     token block-unless { 如果不}

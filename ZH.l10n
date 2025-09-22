@@ -82,7 +82,7 @@ block-elsif     否则如果
 block-for       对每个
 block-given     针对
 block-if        如果
-block-loop      无条件循环
+block-loop      循环
 block-orwith    或用
 block-repeat    重复执行
 block-unless    如果不
