@@ -1,7 +1,7 @@
 # This file contains the ……… Slang of the Raku Programming Language
 
 #- start of generated part of localization ------------------------------------
-#- Generated on 2025-09-22T18:25:57+08:00 by update-localization.raku
+#- Generated on 2025-09-22T19:06:03+08:00 by update-localization.raku
 #- PLEASE DON'T CHANGE ANYTHING BELOW THIS LINE
 
 role L10N::ZH {
@@ -180,7 +180,7 @@ role L10N::ZH {
     token use-require { 动态使用}
     token use-use { 使用}
     method core2ast {
-        my constant %mapping = "所有", "all", "任一", "any", "等待", "await", "造物", "bless", "是否定义", "defined", "听诊", "diag", "崩溃", "die", "收工", "done", "失败", "fail", "fail", "fail", "终止循环", "last", "下一轮循环", "next", "没有一个", "none", "注意", "note", "恰好一个", "one", "打印", "print", "print", "print", "格式化打印", "printf", "printf", "printf", "继续", "proceed", "proceed", "proceed", "提示输入", "prompt", "prompt", "prompt", "输出", "put", "put", "put", "重新此轮循环", "redo", "返回", "return", "执行", "run", "述", "say", "完成", "succeed", "succeed", "succeed", "收集值", "take", "警告", "warn";
+        my constant %mapping = "所有", "all", "任一", "any", "等待", "await", "造物", "bless", "是否定义", "defined", "听诊", "diag", "崩溃", "die", "收工", "done", "失败", "fail", "fail", "fail", "终止循环", "last", "诞生", "new", "下一轮循环", "next", "没有一个", "none", "注意", "note", "恰好一个", "one", "打印", "print", "print", "print", "格式化打印", "printf", "printf", "printf", "继续", "proceed", "proceed", "proceed", "提示输入", "prompt", "prompt", "prompt", "输出", "put", "put", "put", "重新此轮循环", "redo", "返回", "return", "执行", "run", "述", "say", "格式字符串", "sprintf", "sprintf", "sprintf", "完成", "succeed", "succeed", "succeed", "收集值", "take", "警告", "warn";
         my $ast := self.ast;
         my $name := $ast ?? $ast.simple-identifier !! self.Str;
         if %mapping{$name} -> $original {

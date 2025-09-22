@@ -239,7 +239,8 @@ core-last       终止循环
 #core-msb     msb
 
 # KEY            TRANSLATION
-#core-new         new
+# 2025-09-22: 原词 new 依然可以使用
+core-new          诞生
 core-next         下一轮循环
 #core-nextcallee  nextcallee
 #core-nextsame    nextsame
@@ -314,7 +315,7 @@ core-say           述
 #core-sort         sort
 #core-splice       splice
 #core-split        split
-#core-sprintf      sprintf
+core-sprintf       格式字符串 | sprintf
 #core-spurt        spurt
 #core-sqrt         sqrt
 #core-squish       squish
