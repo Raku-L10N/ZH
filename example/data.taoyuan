@@ -1,3 +1,13 @@
+#!/usr/bin/env taoyuan
+# ---------------------------------------------------------------
+# SPDX-License-Identifier: Artistic-2.0
+# ---------------------------------------------------------------
+# File Authors  : Aoran Zeng <ccmywish@qq.com>
+# Contributors  :  Nul None  <nul@none.org>
+# Created On    : <2025-09-21>
+# Last Modified : <2025-09-21>
+# ---------------------------------------------------------------
+
 局部 %h = {
   'a'  => 123,
   'b'  => 456,
