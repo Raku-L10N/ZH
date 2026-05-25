@@ -78,7 +78,7 @@ adverb-pc-exists  是否存在
 # KEY           TRANSLATION
 block-default   其他情况
 block-else      否则
-block-elsif     否则如果
+block-elsif     或如果
 block-for       对每个
 block-given     针对
 block-if        如果
