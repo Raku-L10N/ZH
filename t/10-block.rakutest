@@ -72,7 +72,7 @@ use Test;
 {
     my $ast := Q:to/CODE/.AST("ZH");
     局部 $value;
-    局部 $result = do 若定义且真 $value {
+    局部 $result = 转换为值 若定义且真 $value {
         "有值: $value"
     } 或用 Nil {
         "使用 Nil"
