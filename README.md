@@ -104,7 +104,7 @@ Aoran Zeng <ccmywish@qq.com>
 版权和许可协议
 =======
 
-Copyright 2025 Raku Localization Team
+Copyright 2025, 2026 Raku Localization Team
 
 该库为自由软件，您可以根据 Artistic License 2.0 对其进行重新分发和修改。
 

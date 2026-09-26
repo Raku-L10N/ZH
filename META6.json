@@ -10,14 +10,19 @@
   "description": "TaoYuan, Chinese localization of Raku",
   "license": "Artistic-2.0",
   "name": "L10N::ZH",
-  "perl": "6.d",
   "provides": {
     "L10N::ZH": "lib/L10N/ZH.rakumod",
     "RakuAST::Deparse::L10N::ZH": "lib/RakuAST/Deparse/L10N/ZH.rakumod"
   },
+  "raku": "6.d",
   "resources": [
   ],
   "source-url": "https://github.com/Raku-L10N/ZH.git",
+  "support": {
+    "bugtracker": "https://github.com/Raku-L10N/ZH/issues",
+    "email": "ccmywish@qq.com",
+    "source": "https://github.com/Raku-L10N/ZH.git"
+  },
   "tags": [
     "LOCALIZATION",
     "Chinese"

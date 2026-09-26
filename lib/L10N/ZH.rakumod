@@ -1,14 +1,14 @@
 # This file contains the ……… Slang of the Raku Programming Language
 
 #- start of generated part of localization ------------------------------------
-#- Generated on 2025-09-22T19:06:03+08:00 by update-localization.raku
+#- Generated on 2026-09-26T11:54:10+02:00 by update-localization.raku
 #- PLEASE DON'T CHANGE ANYTHING BELOW THIS LINE
 
 role L10N::ZH {
     use experimental :rakuast;
     token block-default { 其他情况}
     token block-else { 否则}
-    token block-elsif { 否则如果}
+    token block-elsif { 或如果}
     token block-for { 对每个}
     token block-given { 针对}
     token block-if { 如果}
@@ -55,6 +55,7 @@ role L10N::ZH {
     token infix-div { div}
     token infix-does { 能够}
     token infix-eq { eq}
+    token infix-eqv { eqv}
     token infix-ff { ff}
     token infix-ffc { "ff^"}
     token infix-fff { fff}
@@ -78,6 +79,7 @@ role L10N::ZH {
     token infix-unicmp { unicmp}
     token infix-x { x}
     token infix-X { X}
+    token infix-xor { xor}
     token infix-xx { xx}
     token infix-Z { Z}
     token meta-R { R}
